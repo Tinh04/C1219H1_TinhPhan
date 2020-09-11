@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+    <style>
+        .table {
+            margin: 15px 10px;
+            border-collapse: collapse;
+            padding: 30px;
+            border: 5px solid darksalmon;
+        }
+        tr, td
+        {
+            margin: 20px 25px;
+            padding: 30px;
+        }
+        input [type=button]
+        {
+
+        }
+    </style>
+</head>
+<body>
+<table class="table">
+    <tr>
+        <td colspan="4"><input id="input" value="0" content="left" style="width: 100%;"></input></td>
+    </tr>
+    <tr>
+        <td><input type="button" id="button1" value="1" onclick="enter(1)"></td>
+        <td><input type="button" id="button2" value="2" onclick="enter(2)"></td>
+        <td><input type="button" id="button3" value="3" onclick="enter(3)"></td>
+        <td><input type="button" id="buttonAdd" value="+" onclick="enter('+')"></td>
+    </tr>
+    <tr>
+        <td><input type="button" id="button4" value="4" onclick="enter(4)"></td>
+        <td><input type="button" id="button5" value="5" onclick="enter(5)"></td>
+        <td><input type="button" id="button6" value="6" onclick="enter(6)"></td>
+        <td><input type="button" id="buttonSub" value="-" onclick="enter('-')"></td>
+    </tr>
+    <tr>
+        <td><input type="button" id="button7" value="7" onclick="enter(7)"></td>
+        <td><input type="button" id="button8" value="8" onclick="enter(8)"></td>
+        <td><input type="button" id="button9" value="9" onclick="enter(9)"></td>
+        <td><input type="button" id="buttonMulti" value="*" onclick="enter('*')"></td>
+    </tr>
+    <tr>
+        <td><input type="button" id="buttonC" value="C" onclick="enter(null)"></td>
+        <td><input type="button" id="button0" value="0" onclick="enter(0)"></td>
+        <td><input type="button" id="button" value="=" onclick="enter('=')"></td>
+        <td><input type="button" id="buttonDiv" value="/" onclick="enter('/')"></td>
+    </tr>
+</table>
+<script>
+    let firstNumber = true;
+    function enter(value)
+    {
+        if (firstNumber == true) {
+            if (value == '=') {
+                document.getElementById("input").value = eval( document.getElementById("input").value);
+            }
+            else if (value == 'null')
+            {
+                document.getElementById("input").value = " ";
+            }
+            else {
+                document.getElementById("input").value = value;
+                firstNumber = false;
+            }
+
+        } else {
+            if (value == '=') {
+                document.getElementById("input").value = eval( document.getElementById("input").value);
+                firstNumber = true;
+            }
+            else if (value == 'null')
+            {
+                document.getElementById("input").value = " ";
+                firstNumber = true;
+            }
+            else {
+                document.getElementById("input").value += value;
+            }
+        }
+
+    }
+    // function reset() {
+    //     document.getElementById('input').value = '';
+    // }
+    // có thể sử dụng hàm reset() để hoàn tác giá trị đã nhập
+</script>
+</body>
+</html>

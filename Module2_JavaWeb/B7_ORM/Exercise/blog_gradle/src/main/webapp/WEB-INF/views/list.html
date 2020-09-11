@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout :: head">
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+<h1>Blog</h1>
+<a th:href="@{/create-blog}">Create new blog</a><br><br>
+<fieldset th:if="${message}">
+    <legend><h2>Notice</h2></legend>
+    <div class="notify">
+        <div th:if="${message}">
+            <span th:text="${message}"></span>
+        </div>
+    </div>
+</fieldset><br><br>
+<table id="blog">
+    <thead>
+    <tr>
+        <th>Title</th>
+        <th>Recapitulate</th>
+        <th>Date Post</th>
+        <th>View More</th>
+        <th>Edit</th>
+        <th>Delete</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="blog : ${blogs}" th:object="${blog}">
+        <td th:text="*{title}"></td>
+        <td th:text="*{recapitulate}"></td>
+        <td th:text="*{datePost}"></td>
+        <td><a th:href="@{/view-blog/__${blog.id}__ }">Detail</a></td>
+        <td><a th:href="@{/edit-blog/__${blog.id}__ }">Edit</a></td>
+        <td><a th:href="@{/delete-blog/__${blog.id}__ }">Delete</a></td>
+    </tr>
+    </tbody>
+</table>
+<footer th:replace="layout :: footer"></footer>
+</body>
+</html>

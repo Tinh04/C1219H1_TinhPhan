@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiem Tra Nam Nhuan</title>
+</head>
+<body>
+<fieldset>
+    <legend><h3>Check the Leap Year:</h3></legend>
+    <h5>Enter the year:</h5>
+    <input type="text" id="inputyear">
+    <button type="button" onclick="check()">Check</button>
+    <div id="display" style="display: block">
+        <p id="result"></p>
+    </div>
+</fieldset>
+</body>
+<script>
+    function check() {
+        let mod1 = document.getElementById('inputyear').value * 1 % 4;
+        let mod2 = document.getElementById('inputyear').value * 1 % 100;
+        let mod3 = document.getElementById('inputyear').value * 1 % 400;
+        let year = document.getElementById('inputyear').value;
+        if (mod1 === 0)
+        {
+            if (mod2 === 0)
+            {
+                if (mod3 === 0)
+                {
+                    document.getElementById('result').innerHTML = year + " is the leap year";
+                }
+                else
+                {
+                    document.getElementById('result').innerHTML = year + " is not the leap year";
+                }
+            }
+            else
+            {
+                document.getElementById('result').innerHTML = year + " is the leap year";
+            }
+        }
+        else
+        {
+            document.getElementById('result').innerHTML = year + " is not the leap year";
+        }
+    }
+</script>
+</html>

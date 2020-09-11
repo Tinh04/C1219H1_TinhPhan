@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+</head>
+<body>
+<input type = "number" id = "num1">
+<input type = "number" id = "num2">
+<br>
+<button type = "button" onclick="math('+')">Addition (+)</button>
+<button type = "button" onclick="math('-')">Subtraction (-)</button>
+<button type = "button" onclick="math('*')">Multiplication (x)</button>
+<button type = "button" onclick="math('/')">Division (/)</button>
+<br>
+<p id = "result"></p>
+<script>
+    function math(i) {
+        if (num2 * 1 === 0 && i === '/')
+        {
+            document.getElementById("result").innerText = "Eror!";
+        }
+        else {
+            document.getElementById("result").innerText = "Result: " + eval((document.getElementById("num1").value) * 1 + i +
+                (document.getElementById("num2").value) * 1);
+        }
+    }
+</script>
+</body>
+</html>

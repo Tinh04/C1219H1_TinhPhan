@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IQuery UI</title>
+    <script src="../../jquery-3.5.1.min.js"></script>
+<!--    <link rel="stylesheet" href="../../bootstrap-4.5.0-dist/css/bootstrap.css">-->
+    <script src="../../bootstrap-4.5.0-dist/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="../../bootstrap-4.5.0-dist/css/bootstrap.min.css">
+</head>
+<body>
+<div class="row">
+    <div class="col-md-6">
+        <img src="img/jquery-3-0-alpha-is-here-see-what-s-new-486818-2.jpg" height="200" width="710"/>
+    </div>
+    <div class="col-md-6">
+        <img src="img/24-jqueryUI.png" height="200" width="710"/>
+    </div>
+</div>
+
+<div class="row p-1 pt-3">
+    <div class="col-md-6">
+        <div class="list-group">
+            <p class="hide list-group-item list-group-item-action list-group-item-primary">
+                hide()
+                <div id="hide" style="display: none">
+                    <span class="text-danger">Description:</span>
+                    <span>Hide the matched elements.</span>
+                    <div class="p-3">
+                        <div>
+                            <h6 class="bg-dark text-light">.hide()</h6>
+                            <ul>
+                                <li>This signature does not accept any arguments.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h6 class="bg-dark text-light">.hide( [duration ] [, complete ] )</h6>
+                            <ul>
+                                <li><h5>duration (default: 400)</h5></li>
+                                <li>Type: Number or String</li>
+                                <li>A string or number determining how long the animation will run.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h6 class="bg-dark text-light">.hide( options )</h6>
+                            <ul>
+                                <li><h5>options</h5></li>
+                                <li>Type: PlainObject</li>
+                                <li>A map of additional options to pass to the method.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="p-3">
+                        <h6 class="bg-success text-light">Demo</h6>
+                        <button id="hider">Hide</button>
+<!--                        <button id="shower">Show</button>-->
+                    </div>
+                    <div>
+                        <span class="text-danger">Once upon a time there were three programmers...</span>
+                    </div>
+                </div>
+            </p>
+            <p class="animate list-group-item list-group-item-action list-group-item-secondary">
+                animate()
+            <div id="animate" style="display: none">
+                <span class="text-danger">Description:</span>
+                <span>Perform a custom animation of a set of CSS properties.</span>
+                <div class="p-3">
+                    <div>
+                        <h6 class="bg-dark text-light">.animate( properties [, duration ] [, easing ] [, complete ] )</h6>
+                        <ul>
+                            <li><h5>properties</h5></li>
+                            <li>Type: PlainObject</li>
+                            <li>An object of CSS properties and values that the animation will move toward.</li>
+                        </ul>
+                        <ul>
+                            <li><h5>duration (default: 400)</h5></li>
+                            <li>Type: Number or String</li>
+                            <li>A string or number determining how long the animation will run.</li>
+                        </ul>
+                        <ul>
+                            <li><h5>easing (default: swing)</h5></li>
+                            <li>Type: String</li>
+                            <li>A string indicating which easing function to use for the transition.</li>
+                        </ul>
+                        <ul>
+                            <li><h5>complete</h5></li>
+                            <li>Type: Function()</li>
+                            <li>A function to call once the animation is complete, called once per matched element.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h6 class="bg-dark text-light">.animate( properties, options )</h6>
+                        <ul>
+                            <li><h5>properties</h5></li>
+                            <li>Type: PlainObject</li>
+                            <li>An object of CSS properties and values that the animation will move toward.</li>
+                        </ul>
+                        <ul>
+                            <li><h5>options</h5></li>
+                            <li>Type: PlainObject</li>
+                            <li>A map or number additional options to pass to the method.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="p-3" style="position: relative;">
+                    <h6 class="bg-success text-light">Demo</h6>
+                    <button id="left">&laquo;</button>
+                    <button id="right">&raquo;</button>
+                    <div class="block bg-warning m-5" style="left: 50px; position: relative; width: 200px; height: 200px" ></div>
+                </div>
+            </div>
+            </p>
+            <p class="show list-group-item list-group-item-action list-group-item-success">
+                show()
+                <div id="show" style="display: none">
+                    <span class="text-danger">Description:</span>
+                    <span>Display the matched elements.</span>
+                    <div class="p-3">
+                        <div>
+                            <h6 class="bg-dark text-light">.show()</h6>
+                            <ul>
+                                <li>This signature does not accept any arguments.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h6 class="bg-dark text-light">.show( [duration ] [, complete ] )</h6>
+                            <ul>
+                                <li><h5>duration(default: 400)</h5></li>
+                                <li>Type: Number or String</li>
+                                <li>A string or number determining how long the animation will run.</li>
+                            </ul>
+                            <ul>
+                                <li><h5>complete</h5></li>
+                                <li>Type: Function()</li>
+                                <li>A function to call once the animation is complete, called once per matched element.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h6 class="bg-dark text-light">.show( options )</h6>
+                            <ul>
+                                <li><h5>options</h5></li>
+                                <li>Type: PlainObject</li>
+                                <li>A map or number additional options to pass to the method.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h6 class="bg-dark text-light">.show( duration [, easing ] [, complete ] )</h6>
+                            <ul>
+                                <li><h5>duration(default: 400)</h5></li>
+                                <li>Type: Number or String</li>
+                                <li>A string or number determining how long the animation will run.</li>
+                            </ul>
+                            <ul>
+                                <li><h5>easing(default: 400)</h5></li>
+                                <li>Type: String</li>
+                                <li>A string indicating which easing function to use for the transition.</li>
+                            </ul>
+                            <ul>
+                                <li><h5>complete</h5></li>
+                                <li>Type: Function()</li>
+                                <li>A function to call once the animation is complete, called once per matched element.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="p-3">
+                        <h6 class="bg-success text-light">Demo</h6>
+                        <button>Show it</button>
+                        <p style="display: none; background: #6f42c1">Hello  2</p>
+                    </div>
+                </div>
+            </p>
+            <p class="mouse list-group-item list-group-item-action list-group-item-danger">
+                mouseover()
+                <div id="mouse" style="display: none">
+                    <span class="text-danger">Description:</span>
+                    <span>Bind an event handler to the "mouseover" JavaScript event, or trigger that event on an element.</span>
+                    <div class="p-3">
+                        <div>
+                            <h6 class="bg-dark text-light">..mouseover( handler )</h6>
+                            <ul>
+                                <li><h5>handle</h5></li>
+                                <li>Type: Function (Even EvenObject)</li>
+                                <li>A function to execute each time the event is triggered.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h6 class="bg-dark text-light">.mouseover( [eventData ], handler )</h6>
+                            <ul>
+                                <li><h5>eventData</h5></li>
+                                <li>Type: Anything</li>
+                                <li>An object containing data that will be passed to the event handler.</li>
+                            </ul>
+                            <ul>
+                                <li><h5>handle</h5></li>
+                                <li>Type: Function (Even EvenObject)</li>
+                                <li>A function to execute each time the event is triggered.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h6 class="bg-dark text-light">.mouseover()</h6>
+                            <ul>
+                                <li>This signature does not accept any arguments.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="p-3">
+                        <h6 class="bg-success text-light">Demo</h6>
+                        <div class="out overout" style="background: #6f42c1; float: left; width: 40%; height: 120px">
+                            <span>move your mouse</span>
+                            <div class="in">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </p>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="list-group">
+            <p class="drag list-group-item list-group-item-action list-group-item-danger">
+                Draggable
+            <div id="drag" style="display: none">
+                <span class="text-danger">Description:</span>
+                <span>Allow elements to be moved using the mouse.</span>
+                <div class="p-3">
+                    <div>
+                        <h6 class="bg-dark text-light">Options</h6>
+                        <ul>
+                            <li>addClasses</li>
+                            <li>appendTo</li>
+                            <li>...</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h6 class="bg-dark text-light">Method</h6>
+                        <ul>
+                            <li>detroy</li>
+                            <li>disable</li>
+                            <li>...</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h6 class="bg-dark text-light">Events</h6>
+                        <ul>
+                            <li>create</li>
+                            <li>drag</li>
+                            <li>...</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="p-3">
+                    <h6 class="bg-success text-light">Demo</h6>
+                    <div id="dragger" style="width: 150px; height: 150px; padding: 0.5em; border: #6f42c1 1px solid">
+                        <p>Drag me around</p>
+                    </div>
+                </div>
+            </div>
+            </p>
+            <a href="#" class="list-group-item list-group-item-action list-group-item-warning">Accordion</a>
+            <a href="#" class="list-group-item list-group-item-action list-group-item-info">Autocomplete</a>
+            <a href="#" class="list-group-item list-group-item-action list-group-item-dark">Datepicker</a>
+        </div>
+    </div>
+</div>
+
+
+
+<script>
+    // hide()
+    $(document).ready(function () {
+        $(".hide").click(function () {
+            $("#hide").toggle("slow");
+        });
+    });
+    $( "#hider" ).click(function() {
+        $( "span:last-child" ).hide( "fast", function() {
+            $( this ).prev().hide( "fast", arguments.callee );
+        });
+    });
+    // $( "#shower" ).click(function() {
+    //     $( "span" ).show( 2000 );
+    // });
+
+    // animate()
+    $(document).ready(function () {
+        $(".animate").click(function () {
+            $("#animate").toggle("slow");
+        });
+    });
+    $( "#right" ).click(function() {
+        $( ".block" ).animate({ "left": "+=50px" }, "slow" );
+    });
+
+    $( "#left" ).click(function(){
+        $( ".block" ).animate({ "left": "-=50px" }, "slow" );
+    });
+
+//    show()
+    $(document).ready(function () {
+        $(".show").click(function () {
+            $("#show").toggle("slow");
+        });
+    });
+    $( "button" ).click(function() {
+        $( "p" ).show( "slow" );
+    });
+
+//    mouseover()
+    $(document).ready(function () {
+        $(".mouse").click(function () {
+            $("#mouse").toggle("slow");
+        });
+    });
+    var i = 0;
+    $( "div.overout" )
+        .mouseover(function() {
+            i += 1;
+            $( this ).find( "span" ).text( "mouse over x " + i );
+        })
+        .mouseout(function() {
+            $( this ).find( "span" ).text( "mouse out " );
+        });
+
+//    draggable
+    $(document).ready(function () {
+        $(".drag").click(function () {
+            $("#drag").toggle("slow");
+        });
+    });
+    $( function() {
+        $( "#dragger" ).draggable();
+    } );
+</script>
+</p></body>
+</html>

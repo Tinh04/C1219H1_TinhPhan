@@ -1,0 +1,34 @@
+body {
+    font-family: "Times New Roman", Times, serif;
+    background-image: url("img/bg.png");
+    background-repeat: no-repeat;
+    background-position: right top;
+    margin-right: 200px;
+    background-attachment: fixed;
+    background-size: 350px;
+}
+.slide {
+    text-align: justify;
+    background-size: 400px;
+}
+.carousel-inner img {
+    height: 650px;
+}
+.btn-custom:hover {
+    background-color: #addccf;
+    transform: scale(1.0125);
+}
+.btn-custom {
+    transition: all .3s;
+}
+.action img:hover {
+    background-color: #addccf;
+    transform: scale(1.0125);
+}
+.action {
+    transition: all .3s;
+}
+.footer {
+    /*height: 570px;*/
+    /*background-color: #addccf;*/
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Display The Result Of The Functions</title>
+</head>
+<body>
+    <button type="button" onclick="showMessage();">Click Me!</button>
+    <script>
+        function showMessage(){
+            alert('Hello!');
+        }
+    </script>
+    <br>
+    <br>
+    <div id="messageDiv"></div>
+    <button type="button" onclick="show();">Click Here!</button>
+    <script>
+        function show(){
+            document.getElementById('messageDiv').innerHTML = 'nice to meet you!';
+        }
+    </script>
+    <br>
+    <br>
+    <button type="button" onclick="Mess();">Click, pls!</button>
+    <script>
+        function Mess(){
+            console.log('hihi');
+        }
+    </script>
+    <br>
+    <br>
+    <button type="button" onclick="Message();">Click!</button>
+    <script>
+        function Message(){
+            document.write('how are you?!');
+        }
+    </script>
+</body>
+</html>

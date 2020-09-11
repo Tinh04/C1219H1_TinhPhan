@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout :: head">
+    <meta charset="UTF-8">
+    <title>View more blog</title>
+</head>
+<body>
+<h1>View more blog</h1>
+<p>
+    <a th:href="@{/blogs}">
+        Back to blog list
+    </a>
+</p>
+<p>
+    <a th:href="@{/}">
+        Back to home
+    </a>
+</p>
+<div id="form">
+    <table>
+        <tr>
+            <th><label>Title:</label></th>
+            <td><label th:text="${blog.title}"></label></td>
+        </tr>
+        <tr>
+            <th><label>Recapitulate:</label></th>
+            <td><label th:text="${blog.recapitulate}"></label></td>
+        </tr>
+        <tr>
+            <th><label>Date Post:</label></th>
+            <td><label th:text="${blog.datePost}"></label></td>
+        </tr>
+        <tr>
+            <th><label>Content:</label></th>
+            <td><label th:text="${blog.content}"></label></td>
+        </tr>
+        <tr>
+            <th><label>Category:</label></th>
+            <th th:if="${blog.category == null}" th:text="null"></th>
+            <th th:if="${blog.category != null}"
+                th:text="${blog.category.nameCategory}"></th>
+        </tr>
+    </table>
+</div>
+<footer th:replace="layout :: footer"></footer>
+</body>
+</html>

@@ -1,0 +1,117 @@
+/*body {*/
+/*    max-width: 100%;*/
+/*    max-height: 100%;*/
+/*    font-size: 20px;*/
+/*}*/
+/*.body {*/
+/*    width: 100%;*/
+/*    height: auto;*/
+/*    background-size: 100%;*/
+/*    !*background-color: rgb(40, 110, 95);*!*/
+/*    !*background-position: center;*!*/
+/*}*/
+/*.bars {*/
+/*    width: 40px;*/
+/*    height: 40px;*/
+/*    margin: 5px 0px 0px 1350px ;*/
+/*    !*vertical-align: top;*!*/
+/*}*/
+/*.nav {*/
+/*    height: 230px;*/
+/*    font-size: 20px;*/
+/*    font-family: -apple-system;*/
+/*}*/
+/*.btn1 {*/
+/*    letter-spacing: 0;*/
+/*    color: rgb(40, 110, 95);*/
+/*    text-align: center;*/
+/*    margin-left: 100px;*/
+/*}*/
+/*.btn1.color-green:hover,*/
+/*.btn1.color-green:active {*/
+/*    color: rgb(40, 110, 95);*/
+/*}*/
+/*.btn1:hover,*/
+/*.btn1:active {*/
+/*    letter-spacing: 8px;*/
+/*    text-align: center;*/
+/*}*/
+/*.btn1:after,*/
+/*.btn1:before {*/
+/*    backface-visibility: hidden;*/
+/*    border: 1px solid rgb(40, 110, 95);*/
+/*    bottom: 0px;*/
+/*    content: " ";*/
+/*    display: block;*/
+/*    margin: 0 auto;*/
+/*    position: relative;*/
+/*    transition: all 280ms ease-in-out;*/
+/*    width: 0;*/
+/*    opacity: 0;*/
+/*}*/
+/*.btn1.color-green:after,*/
+/*.btn1.color-green:before {*/
+/*    border: 1px solid rgb(40, 110, 95);*/
+/*}*/
+/*.btn1:hover:after,*/
+/*.btn1:hover:before {*/
+/*    backface-visibility: hidden;*/
+/*    transition: width 350ms ease-in-out;*/
+/*    width: 80%;*/
+/*    opacity: 1;*/
+/*}*/
+/*.bg-img {*/
+/*    opacity: 1;*/
+/*    display: block;*/
+/*    width: 100%;*/
+/*    height: auto;*/
+/*    transition: .3s ease;*/
+/*    backface-visibility: hidden;*/
+/*}*/
+/*.header {*/
+/*    transition: .5s ease;*/
+/*    opacity: 0;*/
+/*    position: absolute;*/
+/*    top: 2.5%;*/
+/*    left: 50%;*/
+/*    transform: translate(-50%, -5%);*/
+/*    -ms-transform: translate(-10%, -5%);*/
+/*    text-align: left;*/
+/*}*/
+/*.body:hover .bg-img {*/
+/*    opacity: 0.9;*/
+/*}*/
+/*.body:hover .header {*/
+/*    opacity: 1;*/
+/*}*/
+/*.card-body {*/
+/*    background-color: #b1dfbb;*/
+/*    height: auto;*/
+/*}*/
+/*.tab-pane {*/
+/*    display: block;*/
+/*    font-size: 14px;*/
+/*    text-align: left;*/
+/*    margin: 30px 0px 0px 100px;*/
+/*    color: #6c757d;*/
+/*}*/
+/*.collapse {*/
+/*    background-color: #b1dfbb;*/
+/*}*/
+/*.tab-pane .a {*/
+/*    color: #b1dfbb;*/
+/*}*/
+/*.slide {*/
+/*    background-color: rgb(240, 240, 240);*/
+/*    text-align: justify;*/
+/*    background-size: 400px;*/
+/*}*/
+/*.carousel-item img {*/
+/*    width: 435px;*/
+/*    height: 300px;*/
+/*    !*border-radius: 25px;*!*/
+/*}*/
+/*.footer img {*/
+/*    width: 100%;*/
+/*    height: 500px;*/
+/*}*/

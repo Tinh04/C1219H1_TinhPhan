@@ -1,0 +1,58 @@
+<p>angular-list-service works!</p>
+
+<h4 style="color: burlywood; text-align: center; padding: 15px">DANH SÁCH DỊCH VỤ</h4>
+<table class="table table-striped">
+  <thead style="background-color: #addccf">
+  <tr>
+    <th scope="col">Mã Dịch Vụ</th>
+    <th scope="col">Tên Dịch Vụ</th>
+    <th scope="col">Diện Tích</th>
+    <th scope="col">Số Tầng</th>
+    <th scope="col">Số Người Tối Đa</th>
+    <th scope="col">Chi Phí Thuê</th>
+    <th scope="col">Trạng Thái</th>
+    <th scope="col">Hình Thức Thuê</th>
+    <th scope="col">Thao Tác</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <th scope="row">DV-0001</th>
+    <td>Garden Deluxe King Room</td>
+    <td>50</td>
+    <td>1</td>
+    <td>2</td>
+    <td>3.000.000</td>
+    <td>Hết Phòng</td>
+    <td>Thuê Theo Ngày</td>
+    <td class="action">
+      <a href="#">
+        <img src="https://img.icons8.com/metro/26/000000/edit.png" alt="edit_img"/>
+      </a>
+      <a onclick="return confirm('Bạn Có Muốn Xoá Dịch Vụ Này?')"
+         href="#">
+        <img src="https://img.icons8.com/windows/32/000000/delete-forever.png" alt="delete_img"/>
+      </a>
+    </td>
+  </tr>
+  <tr *ngFor="let service of serviceList">
+    <th>{{service.madichVu}}</th>
+    <td>{{service.tenDichVu}}</td>
+    <td>{{service.dienTich}}</td>
+    <td>{{service.soTang}}</td>
+    <td>{{service.soNguoiToiDa}}</td>
+    <td>{{service.chiPhiThue}}</td>
+    <td>{{service.trangThai}}</td>
+    <td>{{service.hinhThucThue}}</td>
+    <td class="action">
+      <a href="#">
+        <img src="https://img.icons8.com/metro/26/000000/edit.png" alt="edit_img"/>
+      </a>
+      <a onclick="return confirm('Bạn Có Muốn Xoá Dịch Vụ Này?')"
+         href="#">
+        <img src="https://img.icons8.com/windows/32/000000/delete-forever.png" alt="delete_img"/>
+      </a>
+    </td>
+  </tr>
+  </tbody>
+</table>

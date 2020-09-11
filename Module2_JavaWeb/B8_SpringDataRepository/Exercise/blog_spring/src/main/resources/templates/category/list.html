@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout :: head">
+    <meta charset="UTF-8">
+    <title>Category</title>
+</head>
+<body>
+<h1>Category</h1>
+<a th:href="@{/create-category}">Create new category</a><br><br>
+<p>
+    <a th:href="@{/}">
+        Back to home
+    </a>
+</p>
+<fieldset th:if="${message}">
+    <legend><h2>Notice</h2></legend>
+    <div class="notify">
+        <div th:if="${message}">
+            <span th:text="${message}"></span>
+        </div>
+    </div>
+</fieldset><br><br>
+<table id="blog">
+    <thead>
+    <tr>
+        <th>Category</th>
+        <th>Edit</th>
+        <th>Delete</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="category : ${categories}">
+        <td th:text="${category.nameCategory}"></td>
+        <td><a th:href="@{/edit-category/__${category.id}__ }">Edit</a></td>
+        <td><a th:href="@{/delete-category/__${category.id}__ }">Delete</a></td>
+    </tr>
+    </tbody>
+</table>
+<footer th:replace="layout :: footer"></footer>
+</body>
+</html>

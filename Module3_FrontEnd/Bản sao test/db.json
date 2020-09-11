@@ -1,0 +1,84 @@
+{
+  "studentList": [
+    {
+      "id": 1,
+      "name": "Chuc",
+      "birthday": "2000/04/25",
+      "class": "math 1",
+      "email": "chuc@gmail.com",
+      "phone": "0904797456"
+    },
+    {
+      "id": 2,
+      "name": "Mung",
+      "birthday": "1999/03/28",
+      "class": "math 2",
+      "email": "mung@gmail.com",
+      "phone": "0903167245"
+    },
+    {
+      "id": 3,
+      "name": "Nam",
+      "birthday": "2001/07/03",
+      "class": "math 3",
+      "email": "anh@gmail.com",
+      "phone": "0903465234"
+    },
+    {
+      "id": 4,
+      "name": "Moi",
+      "birthday": "1999/04/20",
+      "class": "math 4",
+      "email": "moi@gmail.com",
+      "phone": "0905908467"
+    },
+    {
+      "name": "Sinh",
+      "birthday": "2000-01-11T17:00:00.000Z",
+      "email": "sinh@gmail.com",
+      "phone": "0902785634",
+      "id": 5,
+      "class": "Math 3"
+    },
+    {
+      "name": "Nhat",
+      "birthday": "1998-04-14T17:00:00.000Z",
+      "email": "nhat@gmail.com",
+      "phone": "0901986756",
+      "class": "Math 2",
+      "id": 6
+    },
+    {
+      "name": "Sinh 1",
+      "birthday": "1997-06-08T17:00:00.000Z",
+      "email": "sinh1@gmail.com",
+      "phone": "0909876567",
+      "class": "Math 2",
+      "id": 7
+    },
+    {
+      "name": "Mung 1",
+      "birthday": "1999-05-31T17:00:00.000Z",
+      "email": "mung1@gmail.com",
+      "phone": "0903754652",
+      "class": "Math 2",
+      "id": 8
+    },
+    {
+      "name": "Sinh",
+      "birthday": "2000-01-11T17:00:00.000Z",
+      "email": "sinh@gmail.com",
+      "phone": "0902785634",
+      "class": "Math 5",
+      "id": 9
+    },
+    {
+      "name": "Sinh",
+      "birthday": "2000-01-11T17:00:00.000Z",
+      "email": "sinh@gmail.com",
+      "phone": "0902785634",
+      "class": "Math 2",
+      "id": 10
+    }
+  ]
+}

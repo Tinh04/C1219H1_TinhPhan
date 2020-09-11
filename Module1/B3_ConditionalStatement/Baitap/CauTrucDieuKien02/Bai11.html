@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let luong = parseInt(prompt('Nhap so tien luong (trieu dong):'));
+    if (luong > 0)
+    {
+        if (luong <= 4)
+        {
+            alert('Thue thu nhap ca nhan la: 0');
+        }
+        else if (luong <=6)
+        {
+            alert('Thue thu nhap ca nhan la: ' + luong*5/100);
+        }
+        else if (luong <=9)
+        {
+            alert('Thue thu nhap ca nhan la: ' + luong*10/100);
+        }
+        else if (luong <=14)
+        {
+            alert('Thue thu nhap ca nhan la: ' + luong*15/100);
+        }
+        else if (luong <=24)
+        {
+            alert('Thue thu nhap ca nhan la: ' + luong*20/100);
+        }
+        else if (luong <=44)
+        {
+            alert('Thue thu nhap ca nhan la: ' + luong*25/100);
+        }
+        else if (luong <= 84)
+        {
+            alert('Thue thu nhap ca nhan la: ' + luong*30/100);
+        }
+        else
+        {
+            alert('Thue thu nhap ca nhan la: ' + luong*35/100);
+        }
+    }
+    else
+    {
+        alert('Gia tri khong xac dinh');
+    }
+</script>
+</body>
+</html>

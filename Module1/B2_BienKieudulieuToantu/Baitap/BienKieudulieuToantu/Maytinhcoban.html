@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+</head>
+<body>
+<input type = "number" id = "num1">
+<input type = "number" id = "num2">
+<br>
+<button type = "button" onclick="add()">Addition (+)</button>
+<button type = "button" onclick="sub()">Subtraction (-)</button>
+<button type = "button" onclick="mul()">Multiplication (x)</button>
+<button type = "button" onclick="div()">Division (/)</button>
+<br>
+<p id = "result"></p>
+<script>
+    function add() {
+        document.getElementById("result").innerText = "Result: " + ((document.getElementById("num1").value) * 1 +
+            (document.getElementById("num2").value) * 1);
+    }
+    function sub() {
+        document.getElementById("result").innerText = "Result: " + ((document.getElementById("num1").value) * 1 -
+            (document.getElementById("num2").value) * 1);
+    }
+    function mul() {
+        document.getElementById("result").innerText = "Result: " + ((document.getElementById("num1").value) * 1 *
+            (document.getElementById("num2").value) * 1);
+    }
+    function div() {
+        if (num2 * 1 === 0) {
+            document.getElementById("result").innerText = "Eror!";
+        }
+        else {
+            document.getElementById("result").innerText = "Result: " + ((document.getElementById("num1").value) * 1 /
+                (document.getElementById("num2").value) * 1);
+        }
+        }
+</script>
+</body>
+</html>

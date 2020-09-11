@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout :: head">
+    <meta charset="UTF-8">
+    <title>Final Exam</title>
+    <link rel="stylesheet" href="../css/HomeStyle.css">
+</head>
+<body>
+<div class="container">
+    <div class="nav-bar">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/listEmployee">Employees List</a></li>
+            <li><a href="/createEmployee">Create New Employee</a></li>
+            <li><a href="/search">Search</a></li>
+        </ul>
+    </div>
+</div>
+<h3>Create New Employee</h3>
+<div id="form">
+    <form th:action="@{/createEmployee}" method="POST" th:object="${employee}">
+        <div>
+            <label>Name</label>
+            <input type="text" th:field="*{name}"/>
+            <label th:if="${#fields.hasErrors('name')}"
+                   th:errors = "*{name}"
+                   style="color: red"
+                   th:accept-charset="UTF-8">Name Error</label>
+        </div>
+        <div>
+            <label>Phone</label>
+            <input type="text" th:field="*{phone}"/>
+            <label th:if="${#fields.hasErrors('phone')}"
+                   th:errors = "*{phone}"
+                   style="color: red"
+                   th:accept-charset="UTF-8">Phone Error</label>
+        </div>
+        <div>
+            <label>ID Card</label>
+            <input type="text" th:field="*{idCard}"/>
+            <label th:if="${#fields.hasErrors('idCard')}"
+                   th:errors = "*{idCard}"
+                   style="color: red"
+                   th:accept-charset="UTF-8">IdCard error</label>
+        </div>
+        <div>
+            <label>Birthday</label>
+            <input type="text" th:field="*{birthday}"/>
+            <label th:if="${#fields.hasErrors('birthday')}"
+                   th:errors = "*{birthday}"
+                   style="color: red"
+                   th:accept-charset="UTF-8">Birthday Error</label>
+        </div>
+        <div>
+            <label>Email</label>
+            <input type="email" th:field="*{email}"/>
+                        <label th:if="${#fields.hasErrors('email')}"
+                               th:errors = "*{email}"
+                               style="color: red"
+                               th:accept-charset="UTF-8">Email error</label>
+        </div>
+        <div>
+            <label>Address</label>
+            <input type="text" th:field="*{address}"/>
+            <label th:if="${#fields.hasErrors('address')}"
+                   th:errors = "*{address}"
+                   style="color: red"
+                   th:accept-charset="UTF-8">address error</label>
+        </div>
+        <div>
+            <label>Gender</label>
+            <label>
+                <select th:field="*{gender}">
+                    <option th:value="Male">Male</option>
+                    <option th:value="Female">Female</option>
+                </select>
+            </label>
+        </div>
+        <div>
+            <label>Classify</label>
+            <label>
+                <select th:field="*{classify}">
+                    <option th:value="SystemManagement">System Management</option>
+                    <option th:value="EmployeeManagement">Employee Management</option>
+                    <option th:value="Receptionist">Receptionist</option>
+                    <option th:value="ServiceManagement">Service Management</option>
+                </select>
+            </label>
+        </div>
+        <input type="submit" value="Create"/>
+    </form>
+</div>
+<footer th:replace="layout :: footer"></footer>
+</body>
+</html>

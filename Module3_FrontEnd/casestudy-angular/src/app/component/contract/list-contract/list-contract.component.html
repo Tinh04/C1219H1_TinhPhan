@@ -1,0 +1,42 @@
+<div class="container-fluid pr-0 pl-0">
+  <h4 style="color: burlywood; text-align: center; padding: 15px">DANH SÁCH HỢP ĐỒNG</h4>
+  <div class="row align-items-center p-5">
+    <table class="table table-striped">
+      <thead style="background-color: #addccf">
+      <tr>
+        <th scope="col">Mã Hợp Đồng</th>
+        <th scope="col">Mã Khách Hàng</th>
+        <th scope="col">Tên Khách Hàng</th>
+        <th scope="col">Ngày Tạo Hợp Đồng</th>
+        <th scope="col">Ngày Kết Thúc Hợp Đồng</th>
+        <th scope="col">Tiền Đặt Cọc</th>
+        <th scope="col">Tổng Tiền</th>
+        <th scope="col">Thao Tác</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let contract of contracts | paginate: { itemsPerPage: 2, currentPage: page}" >
+        <th>{{contract.id}}</th>
+        <td>{{contract.maKhachHang}}</td>
+        <td>{{contract.tenKhachHang}}</td>
+        <td>{{contract.ngayTao}}</td>
+        <td>{{contract.ngayKetThuc}}</td>
+        <td>{{contract.tienCoc}}</td>
+        <td>{{contract.tongTien}}</td>
+        <td class="action">
+          <a [routerLink]="['/detailContract/create', contract.id]">
+            <img src="https://img.icons8.com/material-two-tone/24/000000/add-property.png"/>
+          </a>
+          <a [routerLink]="['edit/', contract.id]">
+            <img src="https://img.icons8.com/metro/26/000000/edit.png" alt="edit_img"/>
+          </a>
+          <a (click)="deleteContract(contract)">
+            <img src="https://img.icons8.com/windows/32/000000/delete-forever.png" alt="delete_img"/>
+          </a>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>

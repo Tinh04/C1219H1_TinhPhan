@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout :: head">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div class="container">
+    <div class="nav-bar">
+        <ul>
+            <li><a href="/">Trang Chu</a></li>
+            <li><a href="/khachhang">Danh Sach Khach Hang</a></li>
+            <li><a href="/hopdong">Danh Sach Hop Dong</a></li>
+            <li><a href="/dichvu">Danh Sach Dich Vu</a></li>
+        </ul>
+    </div>
+</div>
+<h3>Danh Sach Khach Hang</h3>
+<table id="furama">
+    <thead>
+    <tr>
+        <th>Ma Khach Hang</th>
+        <th>Ten Khach Hang</th>
+        <th>Ngay Sinh</th>
+        <th>So CMND</th>
+        <th>So Dien Thoai</th>
+        <th>Dia Chi</th>
+        <th>Thao Tac</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="kh : ${khachhang}">
+        <td th:text="${kh.idKhachHang}"></td>
+        <td th:text="${kh.tenKhachHang}"></td>
+        <td th:text="${kh.ngaySinhKhachHang}"></td>
+        <td th:text="${kh.cmndKhachHang}"></td>
+        <td th:text="${kh.sdtKhachHang}"></td>
+        <td th:text="${kh.diaChiKhachHang}"></td>
+        <td>
+            <a th:href="@{/thongtinkhachhang/(id=${kh.idKhachHang})}">
+                Thong Tin Chi Tiet
+            </a>
+            <a th:href="@{/suakhachhang/(id=${kh.idKhachHang})}">
+                Chinh Sua Khach Hang
+            </a>
+            <a onclick="return confirm('Ban Co Muon Xoa Khach Hang Nay?')"
+               th:href="@{/xoakhachhang/(id=${kh.idKhachHang})}">
+                Xoa Khach Hang
+            </a>
+        </td>
+    </tr>
+    </tbody>
+</table><br>
+<div>
+    <a th:if="${khachhang.hasPrevious()}" th:href="@{/khachhang(page=${khachhang.number - 1})}">Previous</a>
+    <span th:text="${khachhang.number + 1}"></span>/<span th:text="${khachhang.totalPages}"></span>
+    <a th:if="${khachhang.hasNext()}" th:href="@{/khachhang(page=${khachhang.number + 1})}">Next</a>
+</div>
+<footer th:replace="layout :: footer"></footer>
+</body>
+</html>

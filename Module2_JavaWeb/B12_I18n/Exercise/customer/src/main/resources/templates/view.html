@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<body>
+<h1 th:text="#{view.heading}"></h1>
+<a href="?lang=en">English</a> | <a href="?lang=vn">Vietnamese</a>
+<p>
+    <a th:href="@{/}">
+        <p th:text="#{view.back}">
+    </a>
+</p>
+<div>
+    <div>
+        <label th:text="#{customer.name}"></label>
+        <label th:text="${customer.getName()}"></label>
+    </div>
+    <div>
+        <label th:text="#{customer.mail}"></label>
+        <label th:text="${customer.getEmail()}"></label>
+    </div>
+    <div>
+        <label th:text="#{customer.address}"></label>
+        <label th:text="${customer.getAddress()}"></label>
+    </div>
+</div>
+</body>
+</html>

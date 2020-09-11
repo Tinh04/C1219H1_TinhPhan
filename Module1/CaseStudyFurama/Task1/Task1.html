@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Information</title>
+    <style>
+        th, td {
+            padding: 15px;
+            text-align: left;
+        }
+        .color {
+            border: 1px solid darkgray;
+            padding: 30px;
+            margin: 20px;
+            background-color: lightsalmon;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+<fieldset style="width: 60%">
+    <legend><h2>Booking Information</h2></legend>
+    <h3> Please enter the information about your booking: </h3>
+    <form>
+        <table class="color">
+            <tr>
+                <th style="background-color: darksalmon; font-size: 20px; text-align: center" colspan="2">Customer
+                    Information
+                </th>
+                <th style="background-color: darksalmon; font-size: 20px; text-align: center" colspan="2">Booking
+                    Information
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    Full name:
+                </td>
+                <td>
+                    <input type="text" id="name">
+                </td>
+                <td>
+                    Discount:
+                </td>
+                <td>
+                    <input type="number" id="discount">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    ID card:
+                </td>
+                <td>
+                    <input type="number" id="idCard">
+                </td>
+                <td>
+                    Quantity:
+                </td>
+                <td>
+                    <input type="number" id="quantity">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Birthday:
+                </td>
+                <td>
+                    <input type="date" id="birth">
+                </td>
+                <td>
+                    Rent days:
+                </td>
+                <td>
+                    <input type="number" id="day">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Email:
+                </td>
+                <td>
+                    <input type="email" id="mail">
+                </td>
+                <td>
+                    Type of service:
+                </td>
+                <td>
+                    <select id="service" style="width: 100%">
+                        <option value="500">Villa</option>
+                        <option value="300">House</option>
+                        <option value="100">Room</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Address:
+                </td>
+                <td>
+                    <input type="text" id="add">
+                </td>
+                <td>
+                    Type of room:
+                </td>
+                <td>
+                    <select id="room" style="width: 100%">
+                        <option value="Vip">Vip</option>
+                        <option value="Business">Business</option>
+                        <option value="Normal">Normal</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Customer:
+                </td>
+                <td>
+                    <select id="cus" style="width: 100%">
+                        <option value="Diamond">Diamond</option>
+                        <option value="Platinum">Platium</option>
+                        <option value="Gold">Gold</option>
+                        <option value="Silver">Silver</option>
+                        <option value="Member">Member</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+        <button type="button" onclick="info()" style="padding: 10px; margin: 10px; font-size: 20px;
+        background-color: lightgray " content="center">Submit</button>
+    </form>
+</fieldset>
+<div id="display" style="display: none">
+    <fieldset style="width: 40%">
+        <legend><h3> Comfirm Information </h3></legend>
+        <table>
+            <tr>
+                <td>
+                    <p id="namedisplay"></p>
+                    <p id="iddisplay"></p>
+                    <p id="emaildisplay"></p>
+                    <p id="adddisplay"></p>
+                    <p id="birthdisplay"></p>
+                    <p id="cusdisplay"></p>
+                </td>
+                <td>
+                    <p id="discountdisplay"></p>
+                    <p id="quantitydisplay"></p>
+                    <p id="daydisplay" style="display: inline"></p>
+                    <p id="servicedisplay"></p>
+                    <p id="roomdisplay"></p>
+                    <p id="price"></p>
+                </td>
+            </tr>
+        </table>
+    </fieldset>
+</div>
+<script>
+    function info() {
+        let ser = document.getElementById('service');
+        let days = document.getElementById('day');
+        let discount = document.getElementById('discount');
+        let pay = (ser.value) * 1 * (days.value) * 1 * (1 - ((discount.value) * 1 / 100) * 1);
+        document.getElementById('display').style.display = 'inline';
+        document.getElementById("namedisplay").innerText = "Full name: " + document.getElementById("name").value;
+        document.getElementById("iddisplay").innerText = "ID card: " + document.getElementById("idCard").value;
+        // console.log(document.getElementById("id").value);
+        document.getElementById("emaildisplay").innerText = "Email: " + document.getElementById("mail").value;
+        document.getElementById("adddisplay").innerText = "Address: " + document.getElementById("add").value;
+        document.getElementById("birthdisplay").innerText = "Birthday: " + document.getElementById("birth").value;
+        document.getElementById("cusdisplay").innerText = "Customer: " + document.getElementById("cus").value;
+        document.getElementById("discountdisplay").innerText = "Discount: " + document.getElementById("discount").value;
+        document.getElementById("quantitydisplay").innerText = "Quantity: " + document.getElementById("quantity").value;
+        document.getElementById("daydisplay").innerText = "Rent days: " + document.getElementById("day").value;
+        document.getElementById("servicedisplay").innerText = "Type of service: " + document.getElementById("service").value;
+        document.getElementById("roomdisplay").innerText = "Type of room: " + document.getElementById("room").value;
+        document.getElementById('price').innerText = "Total payment amount: " + pay;
+    }
+</script>
+</form>
+</body>
+</html>

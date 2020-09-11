@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout :: head">
+    <meta charset="UTF-8">
+    <title>Them Khach Hang</title>
+    <link rel="stylesheet" href="../css/HomeStyle.css">
+</head>
+<body>
+<div class="container">
+    <div class="nav-bar">
+        <ul>
+            <li><a href="/">Trang Chu</a></li>
+            <li><a href="/khachhang">Danh Sach Khach Hang</a></li>
+            <li><a href="hopdong">Danh Sach Hop Dong</a></li>
+            <li><a href="#">asd</a></li>
+        </ul>
+    </div>
+</div>
+<h3>Them Hop Dong</h3>
+<div id="form">
+    <form th:action="@{/themhopdong}" method="POST" th:object="${hopdong}">
+        <div>
+            <label>Ngay Lam Hop Dong:</label>
+            <input type="date" th:field="*{ngayLamHopDong}"/>
+            <label th:if="${#fields.hasErrors('ngayLamHopDong')}"
+                   th:errors = "*{ngayLamHopDong}"
+                   style="color: red"
+                   th:accept-charset="UTF-8">Loi Ngay Lam Hop Dong</label>
+        </div>
+        <div>
+            <label>Ngay Ket Thuc Hop Dong:</label>
+            <input type="date" th:field="*{ngayKetThucHopDong}"/>
+            <label th:if="${#fields.hasErrors('ngayKetThucHopDong')}"
+                   th:errors = "*{ngayKetThucHopDong}"
+                   style="color: red"
+                   th:accept-charset="UTF-8">Loi Ngay Lam Hop Dong</label>
+        </div>
+        <div>
+            <label>Tien Coc:</label>
+            <input type="text" th:field="*{tienCoc}"/>
+            <label th:if="${#fields.hasErrors('tienCoc')}"
+                   th:errors = "*{tienCoc}"
+                   style="color: red"
+                   th:accept-charset="UTF-8">Loi Ngay Lam Hop Dong</label>
+        </div>
+        <div>
+            <label>Tong Tien</label>
+            <input type="text" th:field="*{tongTien}"/>
+            <label th:if="${#fields.hasErrors('tongTien')}"
+                   th:errors = "*{tongTien}"
+                   style="color: red"
+                   th:accept-charset="UTF-8">Loi Ngay Lam Hop Dong</label>
+        </div>
+        <div>
+            <label>Khach hang:</label>
+            <label>
+                <select th:field="*{khachHang.idKhachHang}">
+                    <option th:each="kh : ${khachHang}" th:value="${kh.idKhachHang}"
+                            th:text="${kh.tenKhachHang}"></option>
+                </select>
+            </label>
+        </div>
+        <div>
+            <label>Nhan Vien:</label>
+            <label>
+                <select th:field="*{nhanVien.idNhanVien}">
+                    <option th:each="nv : ${nhanVien}" th:value="${nv.idNhanVien}"
+                            th:text="${nv.tenNhanVien}"></option>
+                </select>
+            </label>
+        </div>
+        <div>
+            <label>Dich Vu:</label>
+            <label>
+                <select th:field="*{dichVu.idDichVu}">
+                    <option th:each="dv : ${danhsachdichvu}" th:value="${dv.idDichVu}"
+                            th:text="${dv.tenDichVu}"></option>
+                </select>
+            </label>
+        </div>
+        <input type="submit" value="Them Hop Dong"/>
+    </form>
+</div>
+<footer th:replace="layout :: footer"></footer>
+</body>
+</html>

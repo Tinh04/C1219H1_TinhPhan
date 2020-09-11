@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TinhPh's Music</title>
+    <script src="../../jquery-3.5.1.min.js"></script>
+    <script src="../../bootstrap-4.5.0-dist/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="music.css">
+    <link rel="stylesheet" href="../../bootstrap-4.5.0-dist/css/bootstrap.min.css">
+</head>
+<body>
+<div class="bg">
+    <img src="img/bangbang.jpg" alt="music_background" class="poster">
+</div>
+
+<div>
+    <div class="col-md-4 img">
+        <img class="poster border-1" src="img/bangbang.jpg">
+    </div>
+    <div class="control alert-light alert col-md-4 row text-center" role="alert">
+        <a onclick="previous()">
+            <img src="https://img.icons8.com/wired/64/000000/rewind.png"
+                                     style="height: 0px; width: 50px">
+        </a>
+        <a id="play" onclick="playOrPause()">
+            <img src="img/play.png" style="height: 50px; width: 50px">
+        </a>
+        <a onclick="next()">
+            <img src="https://img.icons8.com/wired/64/000000/circled-chevron-right.png"
+                                 style="height: 50px; width: 50px">
+        </a>
+        <div style="position: relative; left: 100px">
+            <p class="text-danger" id="title"></p><br>
+            <p id="title1"></p>
+        </div>
+<!--        <div class="position-relative text-left bg-secondary">-->
+<!--            <p id="title"></p>-->
+<!--            <p id="title1"></p>-->
+<!--        </div>-->
+    </div>
+</div>
+
+<script>
+    let songList = ["music/BangBang.mp3", "music/Delicate.mp3", "music/ILikeMeBetter.mp3", "music/Memories.mp3"];
+    let poster = ["img/bangbang.jpg", "img/TaylorSwift.jpg", "img/lauv.jpg", "img/Memories.jpg"];
+    let singer = ["Jessie J, Ariana Grande, Nicki Minaj", "Taylor Swift", "Lauv", "Maroon 5"];
+    let title = $("title");
+    let title1 = $("title1");
+    let title2 = $("title2");
+    let song = new Audio();
+    let currentSong = 0;
+
+    window.onload = playSong;
+    title2.textContent = songList;
+
+    function playSong() {
+        song.src = songList[currentSong];
+        let playing = new Audio();
+        playing = songList[currentSong];
+        console.log(playing.textTracks.label);
+        let a =  playing.textTracks;
+        title = a.label;
+        console.log(title);
+        title1.textContent = singer[currentSong];
+        const play = song.play();
+        if (play !== null) {
+            play.catch(() => {
+                song.play()
+            })
+        }
+    }
+
+    function playOrPause() {
+        if (song.paused) {
+            song.play();
+            $("#play img").attr("src", "https://img.icons8.com/wired/64/000000/circled-pause.png");
+        } else {
+            song.pause();
+            $("#play img").attr("src", "img/play.png");
+        }
+    }
+
+    function next() {
+        currentSong++;
+        if (currentSong > 3) {
+            currentSong = 0;
+        }
+        playSong();
+        $("#play img").attr("src", "https://img.icons8.com/wired/64/000000/circled-pause.png");
+        $(".poster").attr("src", poster[currentSong]);
+    }
+
+    function previous() {
+        currentSong--;
+        if (currentSong < 0) {
+            currentSong = 3;
+        }
+        playSong();
+        $("#play img").attr("src", "https://img.icons8.com/wired/64/000000/circled-pause.png");
+        $(".poster").attr("src", poster[currentSong]);
+    }
+
+</script>
+</body>
+</html>

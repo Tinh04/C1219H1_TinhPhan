@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cac So Nguyen To</title>
+</head>
+<body>
+<script>
+    // let number = parseInt(prompt("Nhap so so nguyen to muon hien thi: "));
+    // let count = 0;
+    // let N = 2;
+    // let isPrime = check();
+    // function check(n) {
+    //     if (n < 2) {
+    //         return false;
+    //     }
+    //     for (let i = 2; i <= Math.sqrt(number); i++)
+    //         if (n % i == 0)
+    //             return false;
+    //     return true;
+    // }
+    // while (count < number){
+    //     if (check(N)){
+    //         document.write(N + " ");
+    //         //output mang --> [gia tri output + " "]
+    //         count++;
+    //     }
+    //     N++;
+
+    let input = parseInt(prompt("Nhap vao 1 so"));
+    hienThiMSoNguyenTo(input);
+    function hienThiMSoNguyenTo(m) {
+        // Lặp đến khi hiển thị đủ m số nguyên tố
+        // kiểm tra số được lặp có phải số nguyên tố không
+        // Nếu phải thì đếm tăng 1
+        // Nếu đếm = m thì dừng
+        var count = 0;
+        var i = 2;
+        var str ="";
+        while (count < m) {
+            if (isSoNguyenTo(i)) {
+                str += i + " ";
+            8    count++;
+            }
+            // Tăng biến i để kiểm tra số tiếp theo có phải là số nguyên tố hay không
+            i++;
+        }
+        document.write(str);
+    }
+    //Viết hàm kiểm tra 1 số có phải số nguyên tố không
+    // input : so
+    // out put : true : la so nguyen to, false : khong phai
+    function isSoNguyenTo(so) {
+        // Lap tu 2 den so , neu ma chia het thi ko phai so nguen to
+        // return false
+        for (let i = 2; i < so; i++) {
+            if (so % i == 0) {
+                return false;
+            }
+        }
+        // la so nguyen to
+        return true;
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout :: head">
+    <meta charset="UTF-8">
+    <title>Blog</title>
+</head>
+<body>
+<h1>Blog</h1>
+<a th:href="@{/create-blog}">Create new blog</a><br><br>
+<a th:href="@{/}">Back to home</a><br><br>
+<form id="form">
+    <input type="text" name="key" placeholder="Search by title"/>
+    <input type="submit" value="Search"/>
+</form><br>
+<fieldset th:if="${message}">
+    <legend><h2>Notice</h2></legend>
+    <div class="notify">
+        <div th:if="${message}">
+            <span th:text="${message}"></span>
+        </div>
+    </div>
+</fieldset><br><br>
+<table id="blog">
+    <thead>
+    <tr>
+        <th>Title</th>
+        <th>Recapitulate</th>
+        <th>Date Post</th>
+        <th>Category</th>
+        <th>View More</th>
+        <th>Edit</th>
+        <th>Delete</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="blog : ${blogs}">
+        <td th:text="${blog.title}"></td>
+        <td th:text="${blog.recapitulate}"></td>
+        <td th:text="${blog.datePost}"></td>
+        <td th:if="${blog.category == null}"
+            th:text="null"></td>
+        <td th:if="${blog.category != null}"
+            th:text="${blog.category.nameCategory}"></td>
+<!--        <td><a th:text="${blog.category.nameCategory}"></a></td>-->
+        <td><a th:href="@{/view-blog/__${blog.id}__ }">Detail</a></td>
+        <td><a th:href="@{/edit-blog/__${blog.id}__ }">Edit</a></td>
+        <td><a th:href="@{/delete-blog/__${blog.id}__ }">Delete</a></td>
+    </tr>
+    </tbody>
+</table><br>
+<div>
+    <a th:if="${blogs.hasPrevious()}" th:href="@{/blogs(page=${blogs.number - 1}, key = ${key})}">Previous</a>
+    <span th:text="${blogs.number + 1}"></span>/<span th:text="${blogs.totalPages}"></span>
+    <a th:if="${blogs.hasNext()}" th:href="@{/blogs(page=${blogs.number + 1}, key = ${key})}">Next</a>
+</div>
+<footer th:replace="layout :: footer"></footer>
+</body>
+</html>

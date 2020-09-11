@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Cart</title>
+</head>
+<body>
+<h3>My Cart</h3>
+<a th:href="@{/}">Back to home</a><br><br>
+<div class="notify">
+    <div th:if="${message}" style="color: coral">
+        <span th:text="${message}"></span>
+    </div>
+</div><br><br>
+<table border="1">
+    <tr>
+        <td>Product</td>
+        <td>Name</td>
+        <td>Price</td>
+        <td>Quantity</td>
+        <td>Action</td>
+    </tr>
+    <tr th:each="c : ${cart}">
+<!--        <td th:text="${c.id}"></td>-->
+        <td><img th:src="${c.image}" style="height: 100px; width: 100px"></td>
+        <td th:text="${c.name}"></td>
+        <td th:text="${c.price}"></td>
+        <td th:text="${c.quantity}"></td>
+        <td><a th:href="@{/delete-product/(id=${c.id})}">Delete</a></td>
+    </tr>
+</table>
+</body>
+</html>

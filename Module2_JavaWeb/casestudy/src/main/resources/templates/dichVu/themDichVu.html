@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout :: head">
+    <meta charset="UTF-8">
+    <title>Them Dich Vu</title>
+    <link rel="stylesheet" href="../css/HomeStyle.css">
+</head>
+<body>
+<div class="container">
+    <div class="nav-bar">
+        <ul>
+            <li><a href="/">Trang Chu</a></li>
+            <li><a href="/khachhang">Danh Sach Khach Hang</a></li>
+            <li><a href="/hopdong">Danh Sach Hop Dong</a></li>
+            <li><a href="/dichvu">Danh Sach Dich Vu</a></li>
+        </ul>
+    </div>
+</div>
+<h3>Them Dich Vu</h3>
+<div id="form">
+    <form th:action="@{/themdichvu}" method="POST" th:object="${dichvu}">
+        <div>
+            <label>Ma Dich Vu</label>
+            <input type="text" th:field="*{idDichVu}">
+            <label th:if="${#fields.hasErrors('idDichVu')}"
+                   th:errors = "*{idDichVu}"
+                   style="color: red"
+                   th:accept-charset="UTF-8">Loi id Dich Vu</label>
+        </div>
+        <div>
+            <label>Ten Dich Vu</label>
+            <input type="text" th:field="*{tenDichVu}"/>
+            <label th:if="${#fields.hasErrors('tenDichVu')}"
+                   th:errors = "*{tenDichVu}"
+                   style="color: red"
+                   th:accept-charset="UTF-8">Loi Ten Dich Vu</label>
+        </div>
+        <div>
+            <label>Dien Tich</label>
+            <input type="text" th:field="*{dienTich}"/>
+            <label th:if="${#fields.hasErrors('dienTich')}"
+                   th:errors = "*{dienTich}"
+                   style="color: red"
+                   th:accept-charset="UTF-8">Loi Dien Tics</label>
+        </div>
+        <div>
+            <label>So Tang</label>
+            <input type="text" th:field="*{soTang}"/>
+            <label th:if="${#fields.hasErrors('soTang')}"
+                   th:errors = "*{soTang}"
+                   style="color: red"
+                   th:accept-charset="UTF-8">Loi So tang</label>
+        </div>
+        <div>
+            <label>So Nguoi Toi Da</label>
+            <input type="text" th:field="*{soNguoiToiDa}"/>
+            <label th:if="${#fields.hasErrors('soNguoiToiDa')}"
+                   th:errors = "*{soNguoiToiDa}"
+                   style="color: red"
+                   th:accept-charset="UTF-8">Loi So Nguoi Toi Da</label>
+        </div>
+        <div>
+            <label>Chi Phi Thue</label>
+            <input type="text" th:field="*{chiPhiThue}"/>
+            <label th:if="${#fields.hasErrors('chiPhiThue')}"
+                   th:errors = "*{chiPhiThue}"
+                   style="color: red"
+                   th:accept-charset="UTF-8">Loi Chi Phi Thue</label>
+        </div>
+        <div>
+            <label>Trang Thai Dich Vu</label>
+            <input type="text" th:field="*{trangThaiDichVu}"/>
+            <label th:if="${#fields.hasErrors('trangThaiDichVu')}"
+                   th:errors = "*{trangThaiDichVu}"
+                   style="color: red"
+                   th:accept-charset="UTF-8">Loi Trang Thai Dich Vu/label>
+        </div>
+        <div>
+            <label>Kieu Thue</label>
+            <label>
+                <select th:field="*{kieuThue.idKieuThue}">
+                    <option th:each="kt : ${danhachkieuthue}" th:value="${kt.idKieuThue}"
+                            th:text="${kt.tenKieuThue}"></option>
+                </select>
+            </label>
+        </div>
+        <div>
+            <label>Loai Dich Vu</label>
+            <label>
+                <select th:field="*{loaiDichVu.idLoaiDichVu}">
+                    <option th:each="ldv : ${danhsachloaidichvu}" th:value="${ldv.idLoaiDichVu}"
+                            th:text="${ldv.tenLoaiDichVu}"></option>
+                </select>
+            </label>
+        </div>
+        <input type="submit" value="Them Dich Vu"/>
+    </form>
+</div>
+<footer th:replace="layout :: footer"></footer>
+</body>
+</html>

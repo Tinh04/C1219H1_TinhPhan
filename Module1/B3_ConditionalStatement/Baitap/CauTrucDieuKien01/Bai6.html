@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let doanhso = parseInt(prompt("Nhap doanh so ban hang (trieu dong):"));
+    let thuong1 = doanhso * 10 / 100;
+    let thuong2 = doanhso * 15 / 100;
+    let thuong3 = doanhso * 20 / 100;
+    if (doanhso <= 100) {
+        alert('So tien hoa hong duoc nhan la: ' + thuong1 + " trieu dong");
+    } else if (doanhso <= 300) {
+        alert('So tien hoa hong duoc nhan la: ' + thuong2 + " trieu dong");
+    } else {
+        alert('So tien hoa hong duoc nhan la: ' + thuong3 + " trieu dong");
+    }
+</script>
+</body>
+</html>

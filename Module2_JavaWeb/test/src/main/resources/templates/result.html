@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout :: head">
+    <meta charset="UTF-8">
+    <title>Final Exam</title>
+</head>
+<body>
+<div class="container">
+    <div class="nav-bar">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/listEmployee">Employees List</a></li>
+            <li><a href="/createEmployee">Create New Employee</a></li>
+            <li><a href="/search">Search</a></li>
+        </ul>
+    </div>
+</div>
+<h3>Result</h3>
+<table id="furama">
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Birthday</th>
+        <th>Gender</th>
+        <th>Phone</th>
+        <th>Id Card</th>
+        <th>Email</th>
+        <th>Address</th>
+        <th>Classify</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="em : ${employees}">
+        <td th:text="${em.id}"></td>
+        <td th:text="${em.name}"></td>
+        <td th:text="${em.birthday}"></td>
+        <td th:text="${em.gender}"></td>
+        <td th:text="${em.phone}"></td>
+        <td th:text="${em.idCard}"></td>
+        <td th:text="${em.email}"></td>
+        <td th:text="${em.address}"></td>
+        <td th:text="${em.classify}"></td>
+    </tbody>
+</table><br>
+<footer th:replace="layout :: footer"></footer>
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Information</title>
+</head>
+<body>
+<h4> Please enter the information about your booking: </h4>
+<form>
+    <table>
+        <tr>
+            <td>Full name:</td>
+            <td><input type="text" id="name"></td>
+        </tr>
+        <tr>
+            <td>ID card:</td>
+            <td><input type="tel" id="id"></td>
+        </tr>
+        <tr>
+            <td>Birthday:</td>
+            <td><input type="date" id="birth" style="width: 100%"></td>
+        </tr>
+        <tr>
+            <td>Email:</td>
+            <td><input type="email" id="mail"></td>
+        </tr>
+        <tr>
+            <td>Address:</td>
+            <td><input type="text" id="add"></td>
+        </tr>
+        <tr>
+            <td>Customer:</td>
+            <td>
+                <select id="cus" style="width: 100%">
+                    <option value="diamond">Diamond</option>
+                    <option value="platinum">Platium</option>
+                    <option value="gold">Gold</option>
+                    <option value="silver">Silver</option>
+                    <option value="member">Member</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Discount:</td>
+            <td><input type="number" id="discount"></td>
+        </tr>
+        <tr>
+            <td>Quantity:</td>
+            <td><input type="number" id="quantity"></td>
+        </tr>
+        <tr>
+            <td>Rent days</td>
+            <td><input type="number" id="day"></td>
+        </tr>
+        <tr>
+            <td>Type of service:</td>
+            <td>
+                <select id="service" style="width: 100%">
+                    <option value="500">Villa</option>
+                    <option value="300">House</option>
+                    <option value="100">Room</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Type of room:</td>
+            <td>
+                <select id="room" style="width: 100%">
+                    <option value="vip">Vip</option>
+                    <option value="business">Business</option>
+                    <option value="normal">Normal</option>
+                </select>
+            </td>
+        </tr>
+    </table>
+    <button type="button" onclick="info()">Submit</button>
+    <div id="display" style="display: none">
+        <p>
+            Full name:
+        </p>
+        <p id="namedisplay"></p>
+        <p>
+            ID card:
+        </p>
+        <p id="iddisplay"></p>
+        <p>
+            Email:
+        </p>
+        <p id="emaildisplay"></p>
+        <p>
+            Address:
+        </p>
+        <p id="adddisplay"></p>
+        <p>
+            Birthday:
+        </p>
+        <p id="birthdisplay"></p>
+        <p>
+            Customer:
+        </p>
+        <p id="cusdisplay"></p>
+        <p>
+            Discount:
+        </p>
+        <p id="discountdisplay"></p>
+        <p>
+            Quantity:
+        </p>
+        <p id="quantitydisplay"></p>
+        <p>
+            Rent days:
+        </p>
+        <p id="daydisplay" style="display: inline"></p>
+        <p>
+            Type of service:
+        </p>
+        <p id="servicedisplay"></p>
+        <p>
+            Type for room:
+        </p>
+        <p id="roomdisplay"></p>
+        <p id="price"></p>
+    </div>
+</form>
+<script>
+    function info() {
+        let ser = document.getElementById('service');
+        let days = document.getElementById('day');
+        let discount = document.getElementById('discount');
+        let pay = (ser.value) * 1 * (days.value) * 1 * (1 - ((discount.value) * 1 / 100) * 1);
+        document.getElementById('display').style.display = 'inline';
+        document.getElementById("namedisplay").innerText = document.getElementById("name").value;
+        document.getElementById("iddisplay").innerText = document.getElementById("id").value;
+        console.log(document.getElementById("id").value);
+        document.getElementById("emaildisplay").innerText = document.getElementById("mail").value;
+        document.getElementById("adddisplay").innerText = document.getElementById("add").value;
+        document.getElementById("birthdisplay").innerText = document.getElementById("birth").value;
+        document.getElementById("cusdisplay").innerText = document.getElementById("cus").value;
+        document.getElementById("discountdisplay").innerText = document.getElementById("discount").value;
+        document.getElementById("quantitydisplay").innerText = document.getElementById("quantity").value;
+        document.getElementById("daydisplay").innerText = document.getElementById("day").value;
+        document.getElementById("servicedisplay").innerText = document.getElementById("service").value;
+        document.getElementById("roomdisplay").innerText = document.getElementById("room").value;
+        document.getElementById('price').innerText = "Total payment amount: " + pay;
+    }
+</script>
+</form>
+</body>
+</html>

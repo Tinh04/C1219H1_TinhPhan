@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let diem1 = parseInt(prompt('Nhap diem kiem tra:'));
+    let diem2 = parseInt(prompt('Nhap diem kiem tra giua ky:'));
+    let diem3 = parseInt(prompt('Nhap diem kiem tra cuoi ky:'))
+    let tong = (diem1 * 0.1 + diem2 * 0.2 + diem3 * 0.7);
+    if (tong >= 8.5)
+    {
+        alert('Diem tong ket: ' + tong + ": Xep hang hoc luc gioi");
+    }
+    else if (tong >= 7)
+    {
+        alert('Diem tong ket: ' + tong + ": Xep hang hoc luc kha");
+    }
+    else if (tong >=5.5)
+    {
+        alert('Diem tong ket: ' + tong + ": Xep hang hoc luc trung binh");
+    }
+    else
+    {
+        alert('Diem tong ket: ' + tong + ": Xep hang hoc luc yeu");
+    }
+</script>
+</body>
+</html>

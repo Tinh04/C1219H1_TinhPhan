@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let dien = parseInt(prompt('Nhap so chu dien:'));
+    if (dien > 0) {
+        if (dien <= 20) {
+            alert('So tien dien la: ' + dien * 700);
+        } else if (dien < 70) {
+            alert('So tien dien la: ' + dien * 1200);
+        } else {
+            alert('So tien dien la: ' + dien * 1500);
+        }
+    } else {
+        alert('Khong xac dinh duoc');
+    }
+</script>
+</body>
+</html>

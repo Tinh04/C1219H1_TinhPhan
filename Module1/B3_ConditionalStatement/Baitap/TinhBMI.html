@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tinh chi so BMI cua co the</title>
+</head>
+<body>
+<fieldset>
+    <legend><h3>Calculate BMI:</h3></legend>
+    <h5>Enter the weight (kg):</h5>
+    <input type="number" id="weight">
+    <h5>Enter the height (m):</h5>
+    <input type="number" id="height"><br><br>
+    <button type="button" onclick="calculate()">Calculate</button>
+    <div id="display" style="display: block">
+        <p id="result"></p>
+    </div>
+    <!--    <input id="output"></input>-->
+    <!--    display on screen-->
+<!--    <script> output. value=""writesomething</script>-->
+<!--        the other way to display-->
+</fieldset>
+<script>
+    function calculate() {
+        let weight = document.getElementById('weight').value * 1;
+        let height = document.getElementById('height').value * 1;
+        let bmi = (weight / (height * height)) * 1;
+        if (bmi < 18)
+            document.getElementById('result').innerText = "BMI= " + bmi + " : Underweight.";
+        else if (bmi < 25.0)
+            document.getElementById('result').innerText = "BMI= " + bmi + " : Normal";
+        else if (bmi < 30.0)
+            document.getElementById('result').innerText = "BMI= " + bmi + " : Overweight";
+        else
+            document.getElementById('result').innerText = "BMI= " + bmi + " : Obese";
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 4</title>
+</head>
+<body>
+<script>
+    let arrayNameCustomer = [];
+    let choose = window.prompt('1. Add new customer' + '\n' + '2. Delete customer');
+
+    switch (choose) {
+        case '1':
+            addNewCustomer();
+            break;
+        case '2':
+            deleteCustomer();
+            break;
+        default:
+            alert('Error!');
+            break;
+    }
+
+    function addNewCustomer() {
+        let arrLength = window.prompt('Enter number of customer to add: ');
+        for (let i = 0; i < arrLength; i++) {
+            arrayNameCustomer.push(window.prompt('Enter customer ' + (i+1) + ': '));
+        }
+        arrayNameCustomer.sort();
+        let result = '';
+        for (let i = 0; i < arrLength; i++) {
+            result += (i+1) + '. ' + arrayNameCustomer[i] + '\n';
+        }
+        alert(result);
+    }
+
+    function deleteCustomer() {
+        arrayNameCustomer[0] = 'Tinh';
+        arrayNameCustomer[1] = 'My';
+        arrayNameCustomer[2] = 'Thuan';
+        arrayNameCustomer[3] = 'Tho';
+        arrayNameCustomer[4] = 'Duy';
+        arrayNameCustomer[5] = 'Tuan';
+        arrayNameCustomer[6] = 'Hai';
+        arrayNameCustomer[7] = 'Nhi';
+        arrayNameCustomer[8] = 'Van';
+        arrayNameCustomer[9] = 'Duyen';
+
+        let result = '';
+        for (let i = 0; i < arrayNameCustomer.length; i++) {
+            result += (i+1) + '. ' + arrayNameCustomer[i] + '\n';
+        }
+        let indexToDelete = window.prompt('Choose customer to index: ' + '\n' + result);
+        arrayNameCustomer.splice(indexToDelete - 1, 1);
+
+        let resultAfterDelete = '';
+        for (let i = 0; i < arrayNameCustomer.length ; i++) {
+            resultAfterDelete += '\n' + (i+1) + '. ' + arrayNameCustomer[i];
+        }
+        alert('List customer after delete: ' + resultAfterDelete);
+    }
+</script>
+</body>
+</html>

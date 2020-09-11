@@ -1,0 +1,95 @@
+<hr>
+<h1 class="d-flex justify-content-center">STUDENT LIST</h1>
+<hr>
+<form [formGroup]="updateForm" (ngSubmit)="onSubmit()" class="col-md-8 offset-md-1">
+  <div class="form-group row">
+    <label class="col">
+      <p style="font-weight: bold; font-style: italic">Ma SV:</p>
+      <input disabled type="text" class="form-control" formControlName="id">
+    </label>
+  </div>
+  <div class="form-group row">
+    <label class="col">
+      <p style="font-weight: bold; font-style: italic">Ten Sinh Vien:</p>
+      <input type="text" class="form-control" formControlName="ten_sinh_vien">
+    </label>
+  </div>
+  <div class="alert alert-danger" role="alert" *ngIf="updateForm.get('ten_sinh_vien').invalid && updateForm.get('ten_sinh_vien').touched">
+    <span *ngIf="updateForm.get('ten_sinh_vien').hasError('required')">Ten SV khong de trong!!</span>
+    <span *ngIf="updateForm.get('ten_sinh_vien').hasError('pattern')">Ten Sv khong chua ki tu dac biet!!</span>
+  </div>
+  <fieldset class="form-group">
+    <div class="row">
+      <legend class="col-form-label col-sm-2 pt-0" style="font-weight: bold; font-style: italic">Ten nhom</legend>
+      <div class="col-sm-10">
+        <div class="form-check">
+          <input class="form-check-input" type="radio" formControlName="ten_nhom" name="ten_nhom" id="nhom1" value="nhóm 1" checked>
+          <label class="form-check-label" for="nhom1">
+            Nhóm 1
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" formControlName="ten_nhom" name="ten_nhom" id="nhom2" value="nhóm 2">
+          <label class="form-check-label" for="nhom2">
+            Nhóm 2
+          </label>
+        </div>
+        <div class="form-check disabled">
+          <input class="form-check-input" type="radio" formControlName="ten_nhom" name="ten_nhom" id="nhom3" value="nhóm 3">
+          <label class="form-check-label" for="nhom3">
+            Nhóm 3
+          </label>
+        </div>
+      </div>
+    </div>
+  </fieldset>
+  <div class="form-group row">
+    <label class="col">
+      <p style="font-weight: bold; font-style: italic">Ten de tai:</p>
+      <input type="text" class="form-control" formControlName="ten_de_tai">
+    </label>
+  </div>
+  <div class="alert alert-danger" role="alert" *ngIf="updateForm.get('ten_de_tai').invalid && updateForm.get('ten_de_tai').touched">
+    <span *ngIf="updateForm.get('ten_de_tai').hasError('required')">Ten de tai khong de trong!!</span>
+  </div>
+  <div class="form-group row">
+    <label class="col">
+      <p style="font-weight: bold; font-style: italic">GV huong dan:</p>
+      <select class="form-control" formControlName="giao_vien_huong_dan">
+        <option value="{{updateForm.value.giao_vien_huong_dan}}">{{updateForm.value.giao_vien_huong_dan}}</option>
+        <option value="Lê Hoàng Quốc Anh">Lê Hoàng Quốc Anh</option>
+        <option value="Nguyễn Lê Trần Nam">Nguyễn Lê Trần Nam</option>
+        <option value="Nguyễn Lê Hoài An">Nguyễn Lê Hoài An</option>
+      </select>
+    </label>
+  </div>
+  <div class="alert alert-danger" role="alert" *ngIf="updateForm.get('giao_vien_huong_dan').invalid && updateForm.get('giao_vien_huong_dan').touched">
+    GV huong dan khong de trong!!
+  </div>
+  <div class="form-group row">
+    <label class="col">
+      <p style="font-weight: bold; font-style: italic">Email:</p>
+      <input type="email" class="form-control" formControlName="email">
+    </label>
+  </div>
+  <div class="alert alert-danger" role="alert" *ngIf="updateForm.get('email').invalid && updateForm.get('email').touched">
+    <span *ngIf="updateForm.get('email').hasError('required')">Email khong de trong!!</span>
+    <span *ngIf="updateForm.get('email').hasError('email')">Email chua dung dinh dang!!</span>
+  </div>
+  <div class="form-group row">
+    <label class="col">
+      <p style="font-weight: bold; font-style: italic">Sdt:</p>
+      <input type="text" class="form-control" formControlName="so_dien_thoai">
+    </label>
+  </div>
+  <div class="alert alert-danger" role="alert" *ngIf="updateForm.get('so_dien_thoai').invalid && updateForm.get('so_dien_thoai').touched">
+    <span *ngIf="updateForm.get('so_dien_thoai').hasError('required')">So dien thoai khong de trong!!</span>
+    <span *ngIf="updateForm.get('so_dien_thoai').hasError('pattern')">Sdt chua dung dinh dang!!</span>
+  </div>
+
+
+  <div class="form-group">
+    <button class="btn btn-info" type="submit" style="margin-left: 500px">Lưu</button>
+    <button class="btn btn-info" type="submit" [routerLink]="['/']" style="margin-left: 50px">Thoát</button>
+  </div>
+</form>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trang chu</title>
+    <link rel="stylesheet" href="/css/HomeStyle.css">
+</head>
+
+<body>
+<div class="banner">
+    <div class="logo">
+        <h1>Furama resort</h1>
+    </div>
+    <div class="user-form">
+        <a href="#">Dang Nhap</a>
+        <a href="#">Dang Ky</a>
+    </div>
+</div>
+<div class="container">
+    <div class="nav-bar">
+        <ul>
+            <li><a href="/">Trang Chu</a></li>
+            <li><a href="/khachhang">Danh Sach Khach Hang</a></li>
+            <li><a href="/hopdong">Danh Sach Hop Dong</a></li>
+            <li><a href="/dichvu">Danh Sach Dich Vu</a></li>
+        </ul>
+    </div>
+    <div class="body">
+        <div class="section">
+            <ul>
+                <li>
+                    <a href="/themkhachhang">Them Khach Hang</a>
+                </li>
+                <li>
+                    <a href="/themdichvu">Them Dich Vu</a>
+                </li>
+                <li>
+                    <a href="/themhopdong">Them Hop Dong</a>
+                </li>
+                <li>
+                    <a th:href="@{/hopdong(DV = 1)}">Them Dich Vu Di Kem</a>
+                </li>
+                <li>
+                    <a href="/bophan">Danh Sach Bo Phan</a>
+                </li>
+                <li>
+                    <a href="/dichvudikem">Danh Sach Dich Vu Di Kem</a>
+                </li>
+                <li>
+                    <a href="/kieuthue">Danh Sach Kieu Thue</a>
+                </li>
+                <li>
+                    <a href="/loaidichvu">Danh Sach Loai Dich Vu</a>
+                </li>
+                <li>
+                    <a href="/loaikhach">Danh Sach Loai Khach</a>
+                </li>
+                <li>
+                    <a href="/trinhdo">Danh Sach Trinh Do</a>
+                </li>
+                <li>
+                    <a href="/vitri">Danh Sach Vi Tri</a>
+                </li>
+                <li>
+                    <a href="#">Section 10</a>
+                </li>
+                <li>
+                    <a href="#">Section 11</a>
+                </li>
+                <li>
+                    <a href="#">Section 12</a>
+                </li>
+                <li>
+                    <a href="#">Section 13</a>
+                </li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="content-top">
+                <p>Noi dung</p>
+            </div>
+            <div class="content-bottom">
+                <p>Noi dung</p>
+            </div>
+        </div>
+        <div class="left-nav">
+            <div class="feature">
+                <h4 style="color: cornflowerblue">Thong Bao</h4>
+            </div>
+            <div class="external-link">
+                <h4 style="color: cornflowerblue">Lien Ket</h4>
+            </div>
+        </div>
+    </div>
+</div>
+<footer>
+    <br>
+    <h4 style="color: white">&copy; 2020 MyTinh</h4>
+</footer>
+</body>
+
+</html>

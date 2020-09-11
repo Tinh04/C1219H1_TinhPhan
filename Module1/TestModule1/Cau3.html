@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cau 3</title>
+</head>
+<body>
+<script>
+    let array1 = [10, 5, 2, 8,10, 6, 8];
+    // let array2 = [2, 4, 0, 5, 1];
+    // let array3 = [8, 6, 2, 8, 1, 1, 4];
+    function findMaxScore(array) {
+        let max = array[0];
+        let index = 0;
+        for (let i = 1; i <= array.length; i++) {
+            if (array[i] >= max) {
+                max = array[i];
+                index = i;
+            }
+        }
+        alert("Diem so cao nhat la: " + max + "\n Vi tri: " + index);
+    }
+
+    findMaxScore(array1);
+</script>
+</body>
+</html>

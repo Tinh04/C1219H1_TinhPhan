@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout :: head">
+    <meta charset="UTF-8">
+    <title>Delete Blog</title>
+</head>
+<body>
+<h1>Delete Blog</h1>
+<p>
+    <a th:href="@{/blogs}">
+        Back to blog list
+    </a>
+</p>
+<p>
+    <a th:href="@{/}">
+        Back to home
+    </a>
+</p>
+<div id="form">
+    <form th:action="@{/delete-blog}" method="POST" th:object="${blog}">
+        <input type="hidden" th:field="*{id}"/>
+        <table>
+            <tr>
+                <th><label>Title:</label></th>
+                <td><label th:text="*{title}"></label></td>
+            </tr>
+            <tr>
+                <th><label>Recapitulate:</label></th>
+                <td><label th:text="*{recapitulate}"></label></td>
+            </tr>
+            <tr>
+                <th><label>Date Post:</label></th>
+                <td><label th:text="*{datePost}"></label></td>
+            </tr>
+            <tr>
+                <th><label>Content:</label></th>
+                <td><label th:text="*{content}"></label></td>
+            </tr>
+            <tr>
+                <th><label>Category:</label></th>
+                <th th:if="${blog.category == null}" th:text="null"></th>
+                <th th:if="${blog.category != null}"
+                    th:text="${blog.category.nameCategory}"></th>
+            </tr>
+        </table>
+        <input type="submit" value="Delete blog"/>
+    </form>
+</div>
+<footer th:replace="layout :: footer"></footer>
+</body>
+</html>

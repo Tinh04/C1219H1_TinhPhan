@@ -1,0 +1,52 @@
+<hr>
+<h3 class="d-flex justify-content-center">STUDENT LIST</h3>
+<div class="row justify-content-between">
+
+  <!-- Search form -->
+  <div class="input-group  mr-3 w-75">
+    <input [(ngModel)]="key" type="text" class="form-control" placeholder="Search customer">
+    <div class="input-group-append">
+      <button class="btn btn-primary" type="button">
+        <i class="fa fa-search"></i>
+      </button>
+    </div>
+  </div>
+
+</div>
+<hr>
+
+<!--TABLE-->
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Birthday</th>
+    <th>Class</th>
+    <th>Email</th>
+    <th>Phone</th>
+    <th>Edit</th>
+    <th>Delete</th>
+  </tr>
+  <tr *ngFor="let std of students">
+<!--    |filter:term | paginate: { itemsPerPage: 5, currentPage: p}-->
+    <td>{{std.id}}</td>
+    <td>{{std.name}}</td>
+    <td>{{std.birthday |date: 'dd/MM/yyyy'}}</td>
+    <td>{{std.class}}</td>
+    <td>{{std.email}}</td>
+    <td>{{std.phone}}</td>
+    <td>
+      <a class="btn text-primary" [routerLink]="['edit/']">
+        <i class="fa fa-edit"></i>
+      </a>
+    </td>
+    <td>
+      <a class="btn text-danger" (click)="deleteStudent(std)">
+        <i class="fa fa-trash"></i>
+      </a>
+    </td>
+
+  </tr>
+</table>
+<!--<pagination-controls (pageChange)="p = $event"></pagination-controls>-->
+

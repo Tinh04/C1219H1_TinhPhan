@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task2</title>
+    <style>
+        th, td {
+            padding: 15px;
+            text-align: left;
+        }
+
+        .color {
+            border: 1px solid darkgray;
+            padding: 30px;
+            margin: 20px;
+            background-color: lightsalmon;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+<fieldset style=" width: 80px">
+    <legend><h2>Booking Information</h2></legend>
+    <form>
+        <table class="color">
+            <tr>
+                <th style="background-color: darksalmon; font-size: 20px; text-align: center" colspan="2">Customer
+                    Information
+                </th>
+                <th style="background-color: darksalmon; font-size: 20px; text-align: center" colspan="2">Booking
+                    Information
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    Full name:
+                </td>
+                <td>
+                    <input type="text" id="ipName" value="My Tinh">
+                </td>
+                <td>
+                    Discount:
+                </td>
+                <td>
+                    <input type="number" id="ipDiscount" value="20">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    ID card:
+                </td>
+                <td>
+                    <input type="number" id="ipID" value='201668131'>
+                </td>
+                <td>
+                    Quantity:
+                </td>
+                <td>
+                    <input type="number" id="ipQuantity" value="5">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Birthday:
+                </td>
+                <td>
+                    <input type="date" id="ipBirth" value="1995-08-20">
+                </td>
+                <td>
+                    Rent days:
+                </td>
+                <td>
+                    <input type="number" id="ipDay" value="3">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Email:
+                </td>
+                <td>
+                    <input type="email" id="ipMail" value="mytinh04@gmail.com">
+                </td>
+                <td>
+                    Type of service:
+                </td>
+                <td>
+                    <select id="ipService" style="width: 100%">
+                        <option value="Villa">Villa</option>
+                        <option value="House">House</option>
+                        <option value="Room">Room</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Address:
+                </td>
+                <td>
+                    <input type="text" id="ipAdd" value="Da Nang">
+                </td>
+                <td>
+                    Type of room:
+                </td>
+                <td>
+                    <select id="ipRoom" style="width: 100%">
+                        <option value="Vip">Vip</option>
+                        <option value="Business">Business</option>
+                        <option value="Normal">Normal</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Customer:
+                </td>
+                <td>
+                    <select id="ipCustomer" style="width: 100%">
+                        <option value="Diamond">Diamond</option>
+                        <option value="Platium">Platium</option>
+                        <option value="Gold">Gold</option>
+                        <option value="Silver">Silver</option>
+                        <option value="Member">Member</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+        <button type="button" id="Display" onclick="btDisplay()" style="padding: 10px;margin: 10px;
+        background-color: lightgray">Display
+        </button>
+        </button>
+        <button type="button" id="Edit" onclick="btEdit()" style="padding: 10px; margin: 10px;
+        background-color: lightgray">Edit
+        </button>
+        <!--        <button type="button" id="Save" onclick="btSave()" style="padding: 10px; margin: 10px;-->
+        <!--        background-color: lightgray">Save-->
+        </button>
+        <button type="button" id="Price" onclick="btPrice()" style="padding: 10px; margin: 10px;
+        background-color: lightgray">Price
+        </button>
+    </form>
+</fieldset>
+<script>
+    // let name = 'My Tinh';
+    // let customer = '15';
+    // let idCard = 201668131;
+    // let quantity = 2;
+    // let mail = 'mytinh04@gmail.com';
+    // let rentDays = 3;
+    // let add = 'Da Nang';
+    // let service = '500';
+    // let birth = '1995-08-20';
+    // let room = '1';
+    // let discount = 0;
+    // function Discount() {
+    //     switch (add) {
+    //         case "Da Nang":
+    //             discount = 20;
+    //             break;
+    //         case "Hue":
+    //             discount = 10;
+    //             break;
+    //         case "Quang Nam":
+    //             discount = 5;
+    //             break;
+    //         default :
+    //             discount = 0;
+    //     }
+    // }
+    let name = document.getElementById('ipName').value;
+    let id = document.getElementById('ipID').value;
+    let birth = document.getElementById("ipBirth").value;
+    let email = document.getElementById("ipMail").value;
+    let add = document.getElementById("ipAdd").value;
+    let customer = document.getElementById("ipCustomer").value;
+    let discount = document.getElementById("ipDiscount").value;
+    let quantity = document.getElementById("ipQuantity").value;
+    let day = document.getElementById("ipDay").value;
+    let room = document.getElementById("ipRoom").value;
+    let service = document.getElementById("ipService").value;
+    function btDisplay() {
+        // document.getElementById('ipName').value = name;
+        // document.getElementById('ipID').value = idCard;
+        // document.getElementById("ipBirth").value = birth;
+        // document.getElementById("ipMail").value = mail;
+        // document.getElementById("ipAdd").value = add;
+        // document.getElementById("ipCustomer").value = customer;
+        // Discount();
+        // document.getElementById("ipDiscount").value = discount;
+        // document.getElementById("ipQuantity").value = quantity;
+        // document.getElementById("ipDay").value = rentDays;
+        // document.getElementById("ipRoom").value = room;
+        // document.getElementById("ipservice").value = service;
+        alert('CUSTOMER INFORMATION' + '\n'
+            + '1 - Name:' + name + '\n'
+            + '2 - Id:' + id + '\n'
+            + '3 - Birthday:' + birth + '\n'
+            + '4 - Email:' + email + '\n'
+            + '5 - Address:' + add + '\n'
+            + '6 - Customer:' + customer + '\n'
+            + '7 - Discount:' + discount + '\n'
+            + '8 - Quantity:' + quantity + '\n'
+            + '9 - Day of hire:' + day + '\n'
+            + '10 - Type of room:' + room + '\n'
+            + '11 - Type of service:' + service + '\n'
+        );
+    }
+
+    function btEdit() {
+        let choose = window.prompt('Choose your property you want to edit');
+        alert('You choose property: ' + choose);
+        switch (choose) {
+            case "1":
+                name = prompt("Edit the name: ");
+                break;
+            case "2":
+                id = prompt("Edit the id: ");
+                break;
+            case "3":
+                birth = prompt("Edit the birthday (dd/mm/yyyy): ");
+                break;
+            case "4":
+                email = prompt("Edit the email: ");
+                break;
+            case "5":
+                add = prompt("Edit the address: ");
+                break;
+            case "6":
+                customer = prompt("Edit the customer: ");
+                break;
+            case "7":
+                discount = prompt("Edit the discount: ");
+                break;
+            case "8":
+                quantity = prompt("Edit the quantity: ");
+                break;
+            case "9":
+                day = prompt("Edit the day of hire: ");
+                break;
+            case "10":
+                room = prompt("Edit the type of room:");
+                break;
+            case "11":
+                service = prompt("Edit the type of service: ");
+                break;
+            default:
+                alert("No action for edit!");
+        }
+    }
+
+    function btPrice() {
+        let currentYear = new Date().getFullYear() //trả ra năm hiện tại
+        let birthday = new Date(birth).getFullYear(); //trả ra năm trong dãy sinh nhật khách hàng
+        let ageCustomer = currentYear - birthday;
+        let discount = 0;
+        let typeRoom = 0;
+        // alert(ageCustomer);
+        // console.log('Tuoi hien tai: ' + ageCustomer);
+        Discount(); //chạy hàm Discount để giảm giá
+
+        function Discount() {
+            switch (add) {
+                case "Da Nang":
+                    discount = 20;
+                    break;
+                case "Hue":
+                    discount = 10;
+                    break;
+                case "Quang Nam":
+                    discount = 5;
+                    break;
+                default :
+                    discount = 0;
+            }
+            if (day > 7) {
+                discount += 30;
+            } else if (day <= 5) {
+                discount += 20;
+            } else {
+                discount += 10;
+            }
+            if (customer == "Diamond") {
+                discount += 15;
+            } else if (customer == "Platium") {
+                discount += 10;
+            } else if (customer == "Gold") {
+                discount += 5;
+            } else if (customer = "Silver") {
+                discount += 2;
+            }
+            if (room === "Villa") {
+                typeRoom = 500;
+            } else if (room === "House") {
+                typeRoom = 300;
+            } else {
+                typeRoom = 100;
+            }
+            if (ageCustomer > 30 && add === "Da Nang") {
+                discount += 2;
+            } else if (ageCustomer > 20 && add === "Da Nang") {
+                discount += 1;
+            }
+            let price = typeRoom * day * (1 - discount / 100);
+            console.log(discount);
+            alert("Price: " + price);
+        }
+    }
+</script>
+</body>
+</html>

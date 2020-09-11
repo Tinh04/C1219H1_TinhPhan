@@ -1,0 +1,36 @@
+{
+  "studentList": [
+    {
+      "id": 1,
+      "name": "Chuc",
+      "birthday": "2000/04/25",
+      "class": "math 1",
+      "email": "chuc@gmail.com",
+      "phone": "0904797456"
+    },
+    {
+      "id": 2,
+      "name": "Mung",
+      "birthday": "1999/03/28",
+      "class": "math 2",
+      "email": "mung@gmail.com",
+      "phone": "0903167245"
+    },
+    {
+      "id": 3,
+      "name": "Nam",
+      "birthday": "2001/07/03",
+      "class": "math 3",
+      "email": "anh@gmail.com",
+      "phone": "0903465234"
+    },
+    {
+      "id": 4,
+      "name": "Moi",
+      "birthday": "1999/04/20",
+      "class": "math 4",
+      "email": "moi@gmail.com",
+      "phone": "0905908467"
+    }
+  ]
+}

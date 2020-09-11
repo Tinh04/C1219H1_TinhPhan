@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tu Dien</title>
+</head>
+<body>
+English:
+<input id="en">
+Vietnamese:
+<input id="vi">
+<button onclick="conv()">Translate</button>
+</body>
+<script>
+    let eng = ["name","age","job"];
+    let vie = ["tên","tuổi","nghề nghiệp"];
+    function conv() {
+        let count = 0;
+        let en = document.getElementById("en").value;
+        let vi = document.getElementById("vi");
+        if ()
+        for (let i = 0; i < eng.length; i++) {
+            if (en === eng[i]) {
+                vi.value = vie[i];
+                break;
+            }
+            else {
+                count++;
+            }
+        }
+        if (count == eng.length) {
+            document.write("Khong tim thay.");
+        }
+    }
+</script>
+</html>

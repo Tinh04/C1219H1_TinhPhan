@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = parseFloat(prompt('Nhap vao he so mu 1:'));
+    let b = parseFloat(prompt('Nhap vao he so mu 0:'));
+    if ( a === 0) {
+        if ( b === 0) {
+            alert('Phuong trinh co vo so nghiem.')
+        } else {
+            alert('Phuong trinh vo nghiem.');
+        }
+    } else {
+        alert('Nghiem cua phuong trinh la: '+ Math.round(-b/a));
+    }
+</script>
+</body>
+</html>

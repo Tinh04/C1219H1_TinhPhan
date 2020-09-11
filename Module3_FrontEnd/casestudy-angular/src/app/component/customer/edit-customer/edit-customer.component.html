@@ -1,0 +1,115 @@
+<div class="container-fluid pr-0 pl-0">
+  <h4 style="color: burlywood; text-align: center; padding: 15px">CHỈNH SỬA KHÁCH HÀNG</h4>
+  <form class="p-5" [formGroup]="customerForm" (ngSubmit)="onSubmit()">
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="inputEmail4">Mã Khách Hàng</label>
+        <input type="text" class="form-control" id="inputEmail4" placeholder="KH-XXXX" formControlName="maKhachHang">
+      </div>
+      <div class="form-group col-md-6">
+        <label>Tên Khách Hàng</label>
+        <input type="text" class="form-control" formControlName="tenKhachHang">
+      </div>
+    </div>
+    <div class="validate row">
+      <div class="form-group col-md-6">
+        <p *ngIf="customerForm.get('maKhachHang').hasError('required') && customerForm.get('maKhachHang').touched">
+          Mã khách hàng không được để trống!
+        </p>
+        <p *ngIf="customerForm.get('maKhachHang').hasError('pattern')">
+          Mã khách hàng không hợp lệ!
+        </p>
+      </div>
+      <div class="form-group col-md-6">
+        <p *ngIf="customerForm.get('tenKhachHang').hasError('required') && customerForm.get('tenKhachHang').touched">
+          Mã khách hàng không được để trống!
+        </p>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="inputEmail4">Ngày Sinh</label>
+        <input type="date" class="form-control" formControlName="ngaySinh">
+      </div>
+      <div class="form-group col-md-6">
+        <label>Số CMND</label>
+        <input type="text" class="form-control" placeholder="XXX-XXX-XXX" formControlName="cmnd">
+      </div>
+    </div>
+    <div class="validate row">
+      <div class="form-group col-md-6">
+        <p *ngIf="customerForm.get('ngaySinh').hasError('required') && customerForm.get('ngaySinh').touched">
+          Ngày Sinh không được để trống!
+        </p>
+      </div>
+      <div class="form-group col-md-6">
+        <p *ngIf="customerForm.get('cmnd').hasError('required') && customerForm.get('cmnd').touched">
+          Số CMND không được để trống!
+        </p>
+        <p *ngIf="customerForm.get('cmnd').hasError('pattern')">
+          Số CMND không hợp lệ!
+        </p>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="inputAddress">Địa Chỉ</label>
+      <input type="text" class="form-control" id="inputAddress" formControlName="diaChi">
+    </div>
+    <div class="validate row">
+      <p *ngIf="customerForm.get('diaChi').hasError('required') && customerForm.get('diaChi').touched">
+        Địa Chỉ không được để trống!
+      </p>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="inputEmail4">Email</label>
+        <input type="email" class="form-control" placeholder="name@example.com" formControlName="email">
+      </div>
+      <div class="form-group col-md-6">
+        <label>Số Điện Thoại</label>
+        <input type="text" class="form-control" placeholder="XXXX-XXX-XXX" formControlName="soDienThoai">
+      </div>
+    </div>
+    <div class="validate row">
+      <div class="form-group col-md-6">
+        <p *ngIf="customerForm.get('email').hasError('required') && customerForm.get('email').touched">
+          Email không được để trống!
+        </p>
+        <p *ngIf="customerForm.get('email').hasError('pattern')">
+          Email không hợp lệ!
+        </p>
+      </div>
+      <div class="form-group col-md-6">
+        <p *ngIf="customerForm.get('soDienThoai').hasError('required') && customerForm.get('soDienThoai').touched">
+          Số Điện Thoại không được để trống!
+        </p>
+        <p *ngIf="customerForm.get('soDienThoai').hasError('pattern')">
+          Số Điện Thoại không hợp lệ!
+        </p>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="inputState">Giới Tính</label>
+        <select id="inputState" class="form-control">
+          <option>Nam</option>
+          <option>Nữ</option>
+        </select>
+      </div>
+      <div class="form-group col-md-6">
+        <label for="inputState">Loại Khách</label>
+        <select class="form-control">
+          <option>Diamond</option>
+          <option>Platinum</option>
+          <option>Gold</option>
+          <option>Silver</option>
+          <option>Member</option>
+        </select>
+      </div>
+    </div>
+    <button type="submit" class="btn" style="background-color: rgb(40, 110, 95); margin-left: 1000px; color: honeydew"
+            [disabled]="customerForm.invalid">
+      Chỉnh Sửa Khách Hàng
+    </button>
+  </form>
+</div>

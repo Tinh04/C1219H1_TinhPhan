@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Câu 1</title>
+</head>
+<body>
+<script>
+    let array = [];
+    array[1] = parseInt(prompt("Nhap gia tri 1"));
+    array[2] = parseInt(prompt("Nhap gia tri 2"));
+    array[3] = parseInt(prompt("Nhap gia tri 3"));
+    array[4] = parseInt(prompt("Nhap gia tri 4"));
+    array[5] = parseInt(prompt("Nhap gia tri 5"));
+    alert("Mang vua nhap la: " + array);
+    array.sort(function(a,b){
+        return a-b;
+    });
+    array.sort(function (a,b) {
+        return b-a;
+    });
+    alert("Mang theo thu tu tang dan:" + array);
+
+
+</script>
+</body>
+</html>

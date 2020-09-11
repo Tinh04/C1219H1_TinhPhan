@@ -1,0 +1,77 @@
+<hr>
+<h3 class="d-flex justify-content-center">CREATE</h3>
+<div class="row justify-content-between">
+</div>
+<hr>
+<form [formGroup]="updateForm" (ngSubmit)="onSubmit()">
+  <div class="form-group row">
+    <label class="col-sm-2 col-form-label">Name</label>
+    <div class="col-sm-10">
+      <input class="form-control" formControlName="name">
+      <p *ngIf="updateForm.get('name').hasError('required') && updateForm.get('name').touched" class="text-danger">
+        Please enter your information!
+      </p>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label class="col-sm-2 col-form-label">Birthday</label>
+    <div class="col-sm-10">
+      <mat-form-field>
+        <input [max] = "maxDate" [min]="minDate" class="form-control"
+               formControlName="birthday" matInput [matDatepicker]="picker" placeholder="Choose a date">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker startView="year" [startAt]="startDate"></mat-datepicker>
+      </mat-form-field>
+      <p *ngIf="updateForm.get('birthday').hasError('required') && updateForm.get('birthday').touched" class="text-danger">
+        Please enter your information!
+      </p>
+      <!--      <p *ngIf="createForm.controls.birthday.errors?.required && createForm.controls.birthday.touched" class="text-danger">-->
+      <!--        Please enter your information!-->
+      <!--      </p>-->
+    </div>
+  </div>
+  <div class="form-group row">
+    <label class="col-sm-2 col-form-label">Class</label>
+    <div class="col-sm-10">
+      <select class="form-control" formControlName="class">
+        <option value="Math 1">math 1</option>
+        <option value="Math 2">math 2</option>
+        <option value="Math 3">math 3</option>
+        <option value="Math 4">math 4</option>
+        <option value="Math 5">math 5</option>
+      </select>
+      <p *ngIf="updateForm.get('class').hasError('required') && updateForm.get('class').touched" class="text-danger">
+        Please enter your information!
+      </p>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label class="col-sm-2 col-form-label">Phone</label>
+    <div class="col-sm-10">
+      <input class="form-control" formControlName="phone">
+      <p *ngIf="updateForm.get('phone').hasError('required') && updateForm.get('phone').touched" class="text-danger">
+        Please enter your information!
+      </p>
+      <p *ngIf="updateForm.get('phone').hasError('pattern')" class="text-danger">
+        This information not valid!
+      </p>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label class="col-sm-2 col-form-label">Email</label>
+    <div class="col-sm-10">
+      <input class="form-control" formControlName="email">
+      <p *ngIf="updateForm.get('email').hasError('required') && updateForm.get('email').touched" class="text-danger">
+        Please enter your information!
+      </p>
+      <p *ngIf="updateForm.get('email').hasError('pattern')" class="text-danger">
+        This information not valid!
+      </p>
+    </div>
+  </div>
+  <div class="form-group row">
+    <div class="col-sm-10">
+      <button type="submit" class="btn btn-primary" [disabled]="updateForm.invalid">Submit</button>
+    </div>
+  </div>
+</form>

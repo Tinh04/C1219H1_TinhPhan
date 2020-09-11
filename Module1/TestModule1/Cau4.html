@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cau 4</title>
+</head>
+<body>
+<script>
+    let Hocsinh = function (stt, name, dob, dtb) {
+        this.stt = stt;
+        this.getstt = function () {
+            return this.stt;
+        };
+        this.name = name;
+        this.getname = function () {
+            return this.name;
+        };
+        this.dob = dob;
+        this.getdob = function () {
+            return this.dob;
+        };
+        this.dtb = dtb;
+        this.getdtb = function () {
+            return this.dtb;
+        };
+    };
+    let hocsinh = new Hocsinh(1, "My Tinh", "20.08.95", 5);
+    let stt = hocsinh.getstt();
+    let name = hocsinh.getname();
+    let dob = hocsinh.getdob();
+    let dtb = hocsinh.getdtb();
+    alert("Thong tin hoc sinh: " + "\nSo thu tu: " + stt + "\nTen: " +name+ "\nNgay sinh: " + dob +
+        "\nDiem trung binh: " + dtb);
+
+    function check(number) {
+        if (number >8){
+            alert("Gioi") ;
+        }
+        else if (number >=6.5){
+            alert("Kha") ;
+        }
+        else if (number >=5){
+            alert("Trung Binh") ;
+        }
+        else if (number >=3.5){
+            alert("Yeu") ;
+        }
+        else{
+            alert("kem") ;
+        }
+    }
+    check(hocsinh.getdtb());
+</script>
+</body>
+</html>

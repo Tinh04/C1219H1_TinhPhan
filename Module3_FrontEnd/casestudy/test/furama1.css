@@ -1,0 +1,63 @@
+/*body {*/
+/*    max-width: 100%;*/
+/*    height: 100%;*/
+/*    font-size: 20px;*/
+/*}*/
+/*.body {*/
+/*    background: url("../img/furama.png") no-repeat;*/
+/*    width: 100%;*/
+/*    height: 610px;*/
+/*    background-size: 100%;*/
+/*    !*background-color: rgb(40, 110, 95);*!*/
+/*    !*background-position: center;*!*/
+/*}*/
+/*.bars {*/
+/*    width: 40px;*/
+/*    height: 40px;*/
+/*    margin: 5px 0px 0px 1350px ;*/
+/*    !*vertical-align: top;*!*/
+/*}*/
+/*.nav {*/
+/*    height: 230px;*/
+/*    font-size: 25px;*/
+/*    font-family: -apple-system;*/
+/*}*/
+/*.btn1 {*/
+/*    letter-spacing: 0;*/
+/*    color: rgb(40, 110, 95);*/
+/*    !*text-align: center;*!*/
+/*    margin-left: 100px;*/
+/*}*/
+/*.btn1.color-green:hover,*/
+/*.btn1.color-green:active {*/
+/*    color: rgb(40, 110, 95);*/
+/*}*/
+/*.btn1:hover,*/
+/*.btn1:active {*/
+/*    letter-spacing: 8px;*/
+/*    text-align: center;*/
+/*}*/
+/*.btn1:after,*/
+/*.btn1:before {*/
+/*    backface-visibility: hidden;*/
+/*    border: 1px solid rgb(40, 110, 95);*/
+/*    bottom: 0px;*/
+/*    content: " ";*/
+/*    display: block;*/
+/*    margin: 0 auto;*/
+/*    position: relative;*/
+/*    transition: all 280ms ease-in-out;*/
+/*    width: 0;*/
+/*    opacity: 0;*/
+/*}*/
+/*.btn1.color-green:after,*/
+/*.btn1.color-green:before {*/
+/*    border: 1px solid rgb(40, 110, 95);*/
+/*}*/
+/*.btn1:hover:after,*/
+/*.btn1:hover:before {*/
+/*    backface-visibility: hidden;*/
+/*    transition: width 350ms ease-in-out;*/
+/*    width: 80%;*/
+/*    opacity: 1;*/
+/*}*/

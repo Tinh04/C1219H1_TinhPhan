@@ -1,0 +1,36 @@
+<div class="wrapper">
+  <!-- Sidebar  -->
+  <nav id="sidebar">
+    <div class="sidebar-header">
+      <h1>
+        <a [routerLink]="['/']" style="color: white; font-size: 30px; text-decoration: none">FINAL EXAM</a>
+      </h1>
+    </div>
+
+    <ul class="list-unstyled components">
+      <li>
+        <a [routerLink]="['/student-list']" style="color: dimgrey; text-decoration: none">Student List</a>
+      </li>
+      <li>
+        <a [routerLink]="['/student-create']" style="color: dimgrey; text-decoration: none">Create New Student</a>
+      </li>
+      <li>
+        <a [routerLink]="['#']" style="color: dimgrey; text-decoration: none">MyTinh</a>
+      </li>
+      <li>
+        <a [routerLink]="['#']" style="color: dimgrey; text-decoration: none">MyTinh</a>
+      </li>
+      <li>
+        <a [routerLink]="['#']" style="color: dimgrey; text-decoration: none">MyTinh</a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Page Content  -->
+  <div id="content">
+<!--    <div class="container-fluid">-->
+<!--    </div>-->
+    <router-outlet></router-outlet>
+  </div>
+</div>
+

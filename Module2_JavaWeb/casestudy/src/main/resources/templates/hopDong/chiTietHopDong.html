@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout :: head">
+    <meta charset="UTF-8">
+    <title>Thong Tin Hop Dong</title>
+    <link rel="stylesheet" href="../css/HomeStyle.css">
+</head>
+<body>
+<div class="container">
+    <div class="nav-bar">
+        <ul>
+            <li><a href="/">Trang Chu</a></li>
+            <li><a href="/khachhang">Danh Sach Khach Hang</a></li>
+            <li><a href="/hopdong">Danh Sach Hop Dong</a></li>
+            <li><a href="#">asd</a></li>
+        </ul>
+    </div>
+</div>
+<h3>Thong Tin Hop Dong</h3>
+<div id="form">
+        <div>
+            <label>Ma Hop Dong:</label>
+            <label th:text="${hopdong.idHopDong}" style="color: #4cbbb9"></label>
+        </div>
+        <div>
+            <label>Ngay Lam Hop Dong:</label>
+            <label th:text="${hopdong.ngayLamHopDong}" style="color: #4cbbb9"></label>
+        </div>
+        <div>
+            <label>Ngay Ket Thuc Hop Dong:</label>
+            <label th:text="${hopdong.ngayKetThucHopDong}" style="color: #4cbbb9"></label>
+        </div>
+        <div>
+            <label>Tien Coc:</label>
+            <label th:text="${hopdong.tienCoc}" style="color: #4cbbb9"></label>
+        </div>
+        <div>
+            <label>Tong Tien:</label>
+            <label th:text="${hopdong.tongTien}" style="color: #4cbbb9"></label>
+        </div>
+        <div>
+            <label>Khach Hang:</label>
+            <label th:text="${hopdong.khachHang.tenKhachHang}" style="color: #4cbbb9"></label>
+        </div>
+        <div>
+            <label>Nhan Vien:</label>
+            <label th:text="${hopdong.nhanVien.tenNhanVien}" style="color: #4cbbb9"></label>
+        </div>
+        <div>
+            <label>Dich Vu:</label>
+            <label th:text="${hopdong.dichVu.tenDichVu}" style="color: #4cbbb9"></label>
+        </div>
+</div>
+<footer th:replace="layout :: footer"></footer>
+</body>
+</html>

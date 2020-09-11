@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cau 2</title>
+</head>
+<body>
+<script>
+    let number = parseInt(prompt("Nhap so nguyen:"));
+    function isMainNumber() {
+        for (let i = 0; i <= number; i++) {
+            if (i === Math.sqrt(number)) {
+                return true;
+            }
+        }
+        return false;
+    }
+    alert(isMainNumber());
+</script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<div class="container-fluid pr-0 pl-0">
+  <h4 style="color: burlywood; text-align: center; padding: 15px">THÊM MỚI NHÂN VIÊN</h4>
+  <form [formGroup]="employeeForm" (ngSubmit)="onSubmit()">
+    <div class="form-row">
+      <div class="form-group col-md-4">
+        <label for="inputEmail4">Mã Nhân Viên</label>
+        <input type="text" class="form-control" formControlName="maNhanVien">
+      </div>
+      <div class="form-group col-md-4">
+        <label for="inputEmail4">Tên Nhân Viên</label>
+        <input type="text" class="form-control" id="inputEmail4" formControlName="tenNhanVien">
+      </div>
+      <div class="form-group col-md-4">
+        <label for="inputEmail4">Ngày Sinh</label>
+        <input type="date" class="form-control" formControlName="ngaySinh">
+      </div>
+    </div>
+    <div class="validate row">
+      <div class="form-group col-md-6">
+        <p *ngIf="employeeForm.get('maNhanVien').hasError('required') && employeeForm.get('maNhanVien').touched">
+          Không được để trống!
+        </p>
+        <p *ngIf="employeeForm.get('maNhanVien').hasError('pattern')">
+          Không hợp lệ!
+        </p>
+      </div>
+      <div class="form-group col-md-4">
+        <p *ngIf="employeeForm.get('tenNhanVien').hasError('required') && employeeForm.get('tenNhanVien').touched">
+          Không được để trống!
+        </p>
+      </div>
+      <div class="form-group col-md-4">
+        <p *ngIf="employeeForm.get('ngaySinh').hasError('required') && employeeForm.get('ngaySinh').touched">
+          Không được để trống!
+        </p>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label>Số Điện Thoại</label>
+        <input type="text" class="form-control" placeholder="XXXX-XXX-XXX", formControlName="soDienThoai">
+      </div>
+      <div class="form-group col-md-6">
+        <label>Số CMND</label>
+        <input type="text" class="form-control" placeholder="XXX-XXX-XXX", formControlName="cmnd">
+      </div>
+    </div>
+    <div class="validate row">
+      <div class="form-group col-md-6">
+        <p *ngIf="employeeForm.get('soDienThoai').hasError('required') && employeeForm.get('soDienThoai').touched">
+          Không được để trống!
+        </p>
+        <p *ngIf="employeeForm.get('soDienThoai').hasError('pattern')">
+          Không hợp lệ!
+        </p>
+      </div>
+      <div class="form-group col-md-6">
+        <p *ngIf="employeeForm.get('cmnd').hasError('required') && employeeForm.get('cmnd').touched">
+          Không được để trống!
+        </p>
+        <p *ngIf="employeeForm.get('cmnd').hasError('pattern')">
+          Không hợp lệ!
+        </p>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="inputAddress">Địa Chỉ</label>
+      <input type="text" class="form-control" id="inputAddress" formControlName="diaChi">
+      <p class="validate" *ngIf="employeeForm.get('diaChi').hasError('required') && employeeForm.get('diaChi').touched">
+        Không được để trống!
+      </p>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="inputEmail4">Email</label>
+        <input type="email" class="form-control" placeholder="name@example.com" formControlName="email">
+      </div>
+      <div class="form-group col-md-6">
+        <label for="inputEmail4">Mức Lương</label>
+        <input type="text" class="form-control" formControlName="luong">
+      </div>
+    </div>
+    <div class="validate row">
+      <div class="form-group col-md-6">
+        <p *ngIf="employeeForm.get('email').hasError('required') && employeeForm.get('email').touched">
+          Không được để trống!
+        </p>
+        <p *ngIf="employeeForm.get('email').hasError('pattern')">
+          Không hợp lệ!
+        </p>
+      </div>
+      <div class="form-group col-md-6">
+        <p *ngIf="employeeForm.get('luong').hasError('required') && employeeForm.get('luong').touched">
+          Không được để trống!
+        </p>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-4">
+        <label for="inputState">Phòng Ban</label>
+        <select id="inputState" class="form-control">
+          <option>Hành Chính</option>
+          <option>Quản Lý </option>
+          <option>An Ninh</option>
+          <option>Phục Vụ</option>
+          <option>Kỹ Thuật</option>
+          <option>Buồng Phòng</option>
+        </select>
+      </div>
+      <div class="form-group col-md-4">
+        <label for="inputState">Vị Trí</label>
+        <select class="form-control">
+          <option>Tổng giám đốc điều hành</option>
+          <option>Quản Lý Nhân Sự</option>
+          <option>Lễ Tân</option>
+          <option>Giám Sát</option>
+          <option>Kỹ Sư Điện</option>
+        </select>
+      </div>
+      <div class="form-group col-md-4">
+        <label for="inputState">Trình Độ</label>
+        <select class="form-control">
+          <option>Thạc Sĩ</option>
+          <option>Đại Học</option>
+          <option>Cao Đẳng</option>
+          <option>Trung Cấp</option>
+        </select>
+      </div>
+    </div>
+    <button type="submit" class="btn" style="background-color: rgb(40, 110, 95); margin-left: 1000px; color: honeydew">
+      Thêm Mới Nhân Viên
+    </button>
+  </form>
+
+</div>

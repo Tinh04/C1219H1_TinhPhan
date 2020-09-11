@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="72b81413-87a4-460c-a00b-3d05e9e3b55a" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="1gONolwWg3GtoiYwUlLZwBTLZTB" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/image" />
+      <recent name="$PROJECT_DIR$/resources" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/image" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/resources/custom" />
+      <recent name="$PROJECT_DIR$/resources" />
+      <recent name="$PROJECT_DIR$/resources/bootstrap-4.5.2-dist/jquery" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="72b81413-87a4-460c-a00b-3d05e9e3b55a" name="Default Changelist" comment="" />
+      <created>1597981855976</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1597981855976</updated>
+      <workItem from="1597981859499" duration="275000" />
+      <workItem from="1597982141820" duration="488000" />
+      <workItem from="1597982968427" duration="13813000" />
+      <workItem from="1598048605655" duration="14461000" />
+      <workItem from="1598145170088" duration="272000" />
+      <workItem from="1598185933650" duration="466000" />
+      <workItem from="1598231935270" duration="3318000" />
+      <workItem from="1598235874218" duration="81000" />
+      <workItem from="1598237558622" duration="6688000" />
+      <workItem from="1598271959429" duration="4755000" />
+      <workItem from="1598389109916" duration="124000" />
+      <workItem from="1598497952994" duration="862000" />
+      <workItem from="1598738381086" duration="216000" />
+      <workItem from="1598740072171" duration="141000" />
+      <workItem from="1598740364585" duration="99000" />
+      <workItem from="1598742755988" duration="97000" />
+      <workItem from="1598743243527" duration="127000" />
+      <workItem from="1598743467532" duration="323000" />
+      <workItem from="1598747144996" duration="2469000" />
+      <workItem from="1598834081007" duration="2712000" />
+      <workItem from="1598937471596" duration="134000" />
+      <workItem from="1599051341138" duration="2522000" />
+      <workItem from="1599123497126" duration="6696000" />
+      <workItem from="1599133160687" duration="288000" />
+      <workItem from="1599530404168" duration="6875000" />
+      <workItem from="1599573480689" duration="47000" />
+      <workItem from="1599573543392" duration="3002000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="458" y="204" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1598048436771">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="458" y="204" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900@0.0.1440.900" timestamp="1598048436771" />
+    <state x="385" y="210" key="run.anything.popup" timestamp="1597982099395">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="385" y="210" key="run.anything.popup/0.0.1440.900@0.0.1440.900" timestamp="1597982099395" />
+  </component>
+</project>

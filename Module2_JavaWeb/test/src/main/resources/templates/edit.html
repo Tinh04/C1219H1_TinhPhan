@@ -1,0 +1,74 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en" xmlns:th="http://www.thymeleaf.org">-->
+<!--<head th:replace="layout :: head">-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Final Exam</title>-->
+<!--    <link rel="stylesheet" href="../css/HomeStyle.css">-->
+<!--</head>-->
+<!--<body>-->
+<!--<div class="container">-->
+<!--    <div class="nav-bar">-->
+<!--        <ul>-->
+<!--            <li><a href="/">Trang Chu</a></li>-->
+<!--            <li><a href="/khachhang">Danh Sach Khach Hang</a></li>-->
+<!--            <li><a href="/hopdong">Danh Sach Hop Dong</a></li>-->
+<!--            <li><a href="/dichvu">Danh Sach Dich Vu</a></li>-->
+<!--        </ul>-->
+<!--    </div>-->
+<!--</div>-->
+<!--<h3>Edit</h3>-->
+<!--<div id="form">-->
+<!--    <form th:action="@{/edit}" method="POST" th:object="${khachhang}">-->
+<!--        <div>-->
+<!--            <label>Ma Khach Hang</label>-->
+<!--            <input type="text" th:field="*{idKhachHang}">-->
+<!--        </div>-->
+<!--        <div>-->
+<!--            <label>Ten Khach Hang</label>-->
+<!--            <input type="text" th:field="*{tenKhachHang}"/>-->
+<!--        </div>-->
+<!--        <div>-->
+<!--            <label>Email</label>-->
+<!--            <input type="email" th:field="*{mailKhachHang}"/>-->
+<!--        </div>-->
+<!--        <div>-->
+<!--            <label>Ngay Sinh</label>-->
+<!--            <input type="text" th:field="*{ngaySinhKhachHang}" th:placeholder="yyyy-MM-dd"/>-->
+<!--        </div>-->
+<!--        <div>-->
+<!--            <label>So CMND</label>-->
+<!--            <input type="text" th:field="*{cmndKhachHang}"/>-->
+<!--        </div>-->
+<!--        <div>-->
+<!--            <label>So Dien Thoai</label>-->
+<!--            <input type="text" th:field="*{sdtKhachHang}"/>-->
+<!--        </div>-->
+<!--        <div>-->
+<!--            <label>Dia Chi</label>-->
+<!--            <input type="text" th:field="*{diaChiKhachHang}"/>-->
+<!--        </div>-->
+<!--        <div>-->
+<!--            <label>Gioi Tinh</label>-->
+<!--            <label>-->
+<!--                <select>-->
+<!--                    <option value="Nam">Nam</option>-->
+<!--                    <option value="Nu">Nu</option>-->
+<!--                    <option value="Khac">Khac</option>-->
+<!--                </select>-->
+<!--            </label>-->
+<!--        </div>-->
+<!--        <div>-->
+<!--            <label>Loai Khach</label>-->
+<!--            <label>-->
+<!--                <select th:field="*{loaiKhach.idLoaiKhach}">-->
+<!--                    <option th:each="loai : ${danhSachLoaiKhach}" th:value="${loai.idLoaiKhach}"-->
+<!--                            th:text="${loai.tenLoaiKhach}"></option>-->
+<!--                </select>-->
+<!--            </label>-->
+<!--        </div>-->
+<!--        <input type="submit" value="Update"/>-->
+<!--    </form>-->
+<!--</div>-->
+<!--<footer th:replace="layout :: footer"></footer>-->
+<!--</body>-->
+<!--</html>-->

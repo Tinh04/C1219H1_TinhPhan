@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let tien = parseInt(prompt('Nhap so tien vay:'));
+    let phiLai = parseInt(prompt('Nhap so lai (phan tram):'));
+    let thang = parseInt(prompt('Nhap so thang:'));
+    let tong = tien * Math.pow((1 + (phiLai / 100)), thang);
+    if (tien > 0 )
+    {
+        alert('Tong so lai: ' + (tong - tien));
+    }
+    else
+    {
+        alert('Gia tri khong xac thuc.')
+    }
+</script>
+</body>
+</html>

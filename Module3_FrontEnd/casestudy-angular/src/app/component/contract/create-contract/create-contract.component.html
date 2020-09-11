@@ -1,0 +1,73 @@
+<div class="container-fluid pr-0 pl-0">
+  <h4 style="color: burlywood; text-align: center; padding: 15px">THÊM MỚI HỢP ĐỒNG</h4>
+  <form class="p-5" [formGroup]="createContractForm" (ngSubmit)="goCreateContract()">
+    <div class="form-row">
+      <div class="form-group col-md-4">
+        <label for="inputEmail4">Mã Khách Hàng</label>
+        <input type="text" class="form-control" id="inputEmail4" placeholder="KH-XXXX">
+      </div>
+      <div class="form-group col-md-4">
+        <label>Tên Khách Hàng</label>
+        <input type="text" class="form-control">
+      </div>
+      <div class="form-group col-md-4">
+        <label>Mã Hợp Đồng</label>
+        <input type="text" class="form-control" formControlName="maHopDong">
+        <p *ngIf="createContractForm.get('maHopDong').hasError('required') && createContractForm.get('maHopDong').touched">
+          Không được để trống!
+        </p>
+        <p *ngIf="createContractForm.get('maHopDong').hasError('pattern')">
+          Không hợp lệ!
+        </p>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="inputEmail4">Ngày Tạo Hợp Đồng</label>
+        <input type="date" class="form-control" formControlName="ngayTao">
+      </div>
+      <div class="form-group col-md-6">
+        <label>Ngày Kết Thúc Hợp Đồng</label>
+        <input type="date" class="form-control" formControlName="ngayKetThuc">
+      </div>
+    </div>
+    <div class="validate row">
+      <div class="form-group col-md-6">
+        <p *ngIf="createContractForm.get('ngayTao').hasError('required') && createContractForm.get('ngayTao').touched">
+          Không được để trống!
+        </p>
+      </div>
+      <div class="form-group col-md-6">
+        <p *ngIf="createContractForm.get('ngayKetThuc').hasError('required') && createContractForm.get('ngayKetThuc').touched">
+          Không được để trống!
+        </p>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="inputEmail4">Tiền Đặt Cọc</label>
+        <input type="text" class="form-control" formControlName="tienCoc">
+      </div>
+      <div class="form-group col-md-6">
+        <label>Tổng Tiền</label>
+        <input type="text" class="form-control" formControlName="tongTien">
+      </div>
+    </div>
+    <div class="validate row">
+      <div class="form-group col-md-6">
+        <p *ngIf="createContractForm.get('tienCoc').hasError('required') && createContractForm.get('tienCoc').touched">
+          Không được để trống!
+        </p>
+      </div>
+      <div class="form-group col-md-6">
+        <p *ngIf="createContractForm.get('tongTien').hasError('required') && createContractForm.get('tongTien').touched">
+          Không được để trống!
+        </p>
+      </div>
+    </div>
+    <button type="submit" class="btn" style="background-color: rgb(40, 110, 95); margin-left: 1000px; color: honeydew" [disabled]="createContractForm.invalid">
+      Thêm Mới Hợp Đồng
+    </button>
+  </form>
+
+</div>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout :: head">
+    <meta charset="UTF-8">
+    <title>Sua Hop Dong</title>
+    <link rel="stylesheet" href="../css/HomeStyle.css">
+</head>
+<body>
+<div class="container">
+    <div class="nav-bar">
+        <ul>
+            <li><a href="/">Trang Chu</a></li>
+            <li><a href="/khachhang">Danh Sach Khach Hang</a></li>
+            <li><a href="#">asd</a></li>
+            <li><a href="#">asd</a></li>
+        </ul>
+    </div>
+</div>
+<h3>Chinh Sua Thong Tin Hop Dong</h3>
+<div id="form">
+    <form th:action="@{/suahopDong}" method="POST" th:object="${hopdong}">
+            <input type="hidden" th:field="*{idHopDong}"/>
+        <div>
+            <label>Ngay Lam Hop Dong:</label>
+            <input type="text" th:field="*{ngayLamHopDong}" th:value="${hopdong.ngayLamHopDong}"/>
+        </div>
+        <div>
+            <label>Ngay Ket Thuc Hop Dong:</label>
+            <input type="text" th:field="*{ngayKetThucHopDong}" th:value="${hopdong.ngayKetThucHopDong}"/>
+        </div>
+        <div>
+            <label>Tien Coc:</label>
+            <input type="text" th:field="*{tienCoc}"/>
+        </div>
+        <div>
+            <label>Tong Tien:</label>
+            <input type="text" th:field="*{tongTien}"/>
+        </div>
+        <div>
+            <label>Khach Hang:</label>
+            <input type="text" th:field="*{khachHang.idKhachHang}" readonly>
+        </div>
+        <div>
+            <label>Nhan Vien:</label>
+            <input type="text" th:field="*{nhanVien.idNhanVien}" readonly>
+        </div>
+        <div>
+            <label>Dich Vu:</label>
+            <label>
+                <select th:field="*{dichVu.idDichVu}">
+                    <option th:each="dv : ${danhsachdichvu}" th:value="${dv.idDichVu}"
+                            th:text="${dv.tenDichVu}"></option>
+                </select>
+            </label>
+        </div>
+        <input type="submit" value="Luu Chinh Sua"/>
+    </form>
+</div>
+<footer th:replace="layout :: footer"></footer>
+</body>
+</html>

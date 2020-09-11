@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = parseInt(prompt('Nhap do dai canh thu nhat: '));
+    let b = parseInt(prompt('Nhap do dai canh thu hai:'));
+    let c = parseInt(prompt('Nhap do dai canh thu ba:'));
+    if (a > 0 && b > 0 && c > 0)
+    {
+        if (a + b > c && b + c > a && a + c > b)
+            alert('Bo ba canh do dai ' + a + ', ' +b+', '+c+', ' +' la 3 canh cua mot tam giac');
+        else
+            alert('Bo ba canh do dai ' + a + ', ' +b+', '+c+', ' +' khong la 3 canh cua mot tam giac');
+    }
+    else
+    {
+        alert('Bo ba canh do dai ' + a + ', ' +b+', '+c+', ' +' khong la 3 canh cua mot tam giac');
+    }
+</script>
+</body>
+</html>

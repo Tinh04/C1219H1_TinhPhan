@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout :: head">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div class="container">
+    <div class="nav-bar">
+        <ul>
+            <li><a href="/">Trang Chu</a></li>
+            <li><a href="/khachhang">Danh Sach Khach Hang</a></li>
+            <li><a href="/hopdong">Danh Sach Hop Dong</a></li>
+            <li><a href="/dichvu">Danh Sach Dich Vu</a></li>
+        </ul>
+    </div>
+</div>
+<h3>Danh Sach Dich Vu Di Kem</h3>
+<table id="furama">
+    <thead>
+    <tr>
+        <th>Ma Dich Vu Di Kem</th>
+        <th>Ten Dich Vu Di Kem</th>
+        <th>Gia Dich Vu Di Kem</th>
+        <th>Don Vi Dich Vu Di Kem</th>
+        <th>Trang Thai Dich Vu Di Kem</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="dvdk : ${dichvudikem}">
+        <td th:text="${dvdk.idDichVuDiKem}"></td>
+        <td th:text="${dvdk.tenDichVuDiKem}"></td>
+        <td th:text="${dvdk.giaDichVuDiKem}"></td>
+        <td th:text="${dvdk.donViDichVuDiKem}"></td>
+        <td th:text="${dvdk.trangThaiDichVuDiKem}"></td>
+    </tr>
+    </tbody>
+</table><br>
+<footer th:replace="layout :: footer"></footer>
+</body>
+</html>

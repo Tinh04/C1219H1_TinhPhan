@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout :: head">
+    <meta charset="UTF-8">
+    <title>Them Khach Hang</title>
+    <link rel="stylesheet" href="../css/HomeStyle.css">
+</head>
+<body>
+<div class="container">
+    <div class="nav-bar">
+        <ul>
+            <li><a href="/">Trang Chu</a></li>
+            <li><a href="/khachhang">Danh Sach Khach Hang</a></li>
+            <li><a href="/hopdong">Danh Sach Hop Dong</a></li>
+            <li><a href="/dichvu">Danh Sach Dich Vu</a></li>
+        </ul>
+    </div>
+</div>
+<h3>Hop Dong Can Them</h3>
+<br>
+<fieldset th:if="${message}">
+    <legend><h2>Thong Bao</h2></legend>
+    <div class="notify">
+        <div th:if="${message}">
+            <span th:text="${message}"></span>
+        </div>
+    </div>
+</fieldset>
+<br><br>
+<div id="form">
+    <form th:action="@{/DichVuDiKem}" method="get" th:object="${hopDongChiTiet}">
+        <div>
+            <label>Id Khach Hang</label>
+            <input type="text" th:value="${hopDongThem.khachHang.tenKhachHang}" readonly/>
+        </div>
+        <div>
+            <label>Id Hop Đong:</label>
+            <input type="text" th:name="id" th:value="${hopDongThem.idHopDong}" readonly/>
+        </div>
+        <div>
+            <label>Dich Vu Di Kem:</label>
+            <label>
+                <select th:field="*{dichVuDiKem.idDichVuDiKem}">
+                    <option th:each="dv : ${danhSachDichVuDiKem}" th:value="${dv.idDichVuDiKem}"
+                            th:text="${dv.tenDichVuDiKem}"></option>
+                </select>
+            </label>
+        </div>
+        <div>
+            <label>So Luong</label>
+            <input type="text" th:field="*{soLuong}"/>
+        </div>
+        <input type="submit" value="Them Hop Dong"/>
+    </form>
+</div>
+<footer th:replace="layout :: footer"></footer>
+</body>
+</html>

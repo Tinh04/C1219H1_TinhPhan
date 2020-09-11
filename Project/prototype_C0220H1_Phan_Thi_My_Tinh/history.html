@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test History</title>
+    <script src="resources/bootstrap-4.5.2-dist/jquery/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" href="resources/bootstrap-4.5.2-dist/css/bootstrap.min.css">
+    <script src="resources/js/bootstrap.min.js"></script>
+    <script src="resources/custom/javascript.js"></script>
+    <link rel="stylesheet" href="resources/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="resources/custom/style.css">
+</head>
+<body>
+<div class="container w-75 mt-5">
+    <form class="card info-form">
+        <div class="title card-header">
+            <span>Test History</span>
+        </div>
+        <div class="form-row">
+            <div class="col-md-12">
+                <table class="table table-bordered w-100 h-100 text-center">
+                    <thead>
+                    <tr style="background-color: #DFF0D8">
+                        <td scope="col">NO</td>
+                        <td scope="col">Test</td>
+                        <td scope="col">
+                            Mark
+                            <span>(mark/10)</span>
+                        </td>
+                        <td scope="col">
+                            Day
+                            <span>(MM/dd/yy)</span>
+                        </td>
+                    </tr>
+                    </thead>
+                    <tbody id="tbody-custom">
+                    <tr>
+                        <td scope="row">1</td>
+                        <td>Math - issue 1</td>
+                        <td>8</td>
+                        <td>2/1/2015</td>
+                    </tr>
+                    <tr>
+                        <td scope="row">2</td>
+                        <td>Chemistry - issue 2</td>
+                        <td>7</td>
+                        <td>2/1/2015</td>
+                    </tr>
+                    <tr>
+                        <td scope="row">3</td>
+                        <td>Physical - issue 1</td>
+                        <td>7</td>
+                        <td>3/1/2015</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="pagination">
+                <a href="#">&laquo;</a>
+                <a href="#">1</a>
+                <a class="active" href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>
+                <a href="#">6</a>
+                <a href="#">7</a>
+                <a href="#">&raquo;</a>
+            </div>
+        </div>
+        <div class="form-row mt-3 mb-3">
+            <div class="col-md-4 form-group font-weight-bold text-right">
+                <label>Total Mark:</label>
+                <label class="text-danger">22.0</label>
+            </div>
+            <div class="col-md-4 form-group font-weight-bold text-center">
+                <label>AVG:</label>
+                <label class="text-danger">7.33</label>
+            </div>
+            <div class="col-md-4 form-group text-left">
+                <a href="information.html" class="btn btn-info">Close</a>
+            </div>
+        </div>
+    </form>
+</div>
+</body>
+</html>

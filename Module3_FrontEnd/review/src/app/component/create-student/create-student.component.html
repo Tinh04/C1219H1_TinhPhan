@@ -1,0 +1,65 @@
+<form [formGroup]="createStudentForm" (ngSubmit)="onSubmit()">
+  <div class="form-group row">
+    <label class="col-sm-2 col-form-label">Name</label>
+    <div class="col-sm-10">
+      <input class="form-control" type="text" formControlName="name">
+      <p *ngIf="createStudentForm.get('name').hasError('required') &&
+                createStudentForm.get('name').touched">
+        Please enter your information!
+      </p>
+    </div>
+<!--    <div class="form-group row">-->
+<!--      <label class="col-sm-2 col-form-label">Birthday</label>-->
+<!--      <div class="col-sm-10">-->
+<!--        <mat-form-field>-->
+<!--          <input [max] = "maxDate" [min]="minDate" class="form-control" formControlName="birthday" matInput-->
+<!--                 [matDatepicker]="picker">-->
+<!--          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>-->
+<!--          <mat-datepicker #picker startView="year" [startAt]="startDate"></mat-datepicker>-->
+<!--        </mat-form-field>-->
+<!--        <p *ngIf="createStudentForm.get('birthday').hasError('required') &&-->
+<!--                createStudentForm.get('birthday').touched">-->
+<!--          Please enter your information!-->
+<!--        </p>-->
+<!--      </div>-->
+<!--    </div>-->
+    <div class="form-group row">
+      <label class="col-sm-2 col-form-label">Class</label>
+      <div class="col-sm-10">
+        <select class="form-control">
+          <option>math 1</option>
+          <option>math 2</option>
+          <option>math 3</option>
+          <option>math 4</option>
+          <option>math 5</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label class="col-sm-2 col-form-label">Email</label>
+      <div class="col-sm-10">
+        <input class="form-control" type="email" formControlName="email">
+        <p *ngIf="createStudentForm.get('email').hasError('required') &&
+                createStudentForm.get('email').touched">
+          Please enter your information!
+        </p>
+        <p *ngIf="createStudentForm.get('email').hasError('pattern')">
+          This information not valid!
+        </p>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label class="col-sm-2 col-form-label">Phone</label>
+      <div class="col-sm-10">
+        <input class="form-control" formControlName="phone">
+        <p *ngIf="createStudentForm.get('phone').hasError('required') &&
+                createStudentForm.get('phone').touched">
+          Please enter your information!
+        </p>
+        <p *ngIf="createStudentForm.get('phone').hasError('pattern')">
+          This information not valid!
+        </p>
+      </div>
+    </div>
+  </div>
+</form>

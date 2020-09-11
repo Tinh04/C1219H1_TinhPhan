@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Personal Information</title>
+    <script src="resources/bootstrap-4.5.2-dist/jquery/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" href="resources/bootstrap-4.5.2-dist/css/bootstrap.min.css">
+    <script src="resources/js/bootstrap.min.js"></script>
+    <script src="resources/custom/javascript.js"></script>
+    <link rel="stylesheet" href="resources/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="resources/custom/style.css">
+</head>
+<body>
+<div class="container mt-5" style="width: 800px">
+    <form class="card info-form m-5" onsubmit="return submitForm()">
+        <div class="card-header title">
+            <span>Edit Personal Information</span>
+        </div>
+        <div class="p-5">
+            <div class="row mb-3">
+                <div class="col-md-4 font-weight-bolder">Full name</div>
+                <div class="col-md-7">
+                    <input class="form-control" type="text" value="demons" required>
+                </div>
+                <div class="col-md-1 text-danger">
+                    *
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-md-4 font-weight-bolder">Email</div>
+                <div class="col-md-7">
+                    <input class="form-control" type="email" value="demons@gmail.com" required>
+                </div>
+                <div class="col-1 text-danger">
+                    *
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-md-4 font-weight-bolder">Address</div>
+                <div class="col-md-7">
+                    <input class="form-control" type="text" value="Singapore" required>
+                </div>
+                <div class="col-1 text-danger">
+                    *
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-md-4 font-weight-bolder">Phone</div>
+                <div class="col-md-7">
+                    <input class="form-control" type="text" value="123456789" required>
+                </div>
+                <div class="col-1 text-danger">
+                    *
+                </div>
+            </div>
+            <div class="row mb-1 mt-4">
+                <div class="col-md-12 text-center">
+                    <button class="btn btn-light border-secondary">Submit</button>
+                    <a href="edit_password.html" class="btn btn-info">Edit Password</a>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+</body>
+</html>
